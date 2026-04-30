@@ -1,0 +1,1390 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mujoco model="guandao">
+  <compiler meshdir="./mesh" autolimits="true" />
+  <default>
+    <default class="visual_1">
+      <geom type="mesh" contype="0" conaffinity="0" group="2" />
+    </default>
+    <default class="collision_1">
+      <geom type="mesh" contype="1" conaffinity="1" group="3" friction="0.8" rgba="0.2 0.6 1.0 0.3" />
+    </default>
+  </default>
+  <asset>
+    <material name="black_1" rgba="0.0 0.0 0.0 1.0" />
+    <material name="grey" rgba="0.5 0.5 0.5 1.0" />
+    <material name="red" rgba="1.0 0.0 0.0 1.0" />
+    <material name="green" rgba="0.0 1.0 0.0 1.0" />
+    <material name="blue" rgba="0.0 0.0 1.0 1.0" />
+    <material name="yellow" rgba="1.0 1.0 0.0 1.0" />
+    <material name="cyan" rgba="0.0 1.0 1.0 1.0" />
+    <material name="magenta" rgba="1.0 0.0 1.0 1.0" />
+    <material name="orange" rgba="1.0 0.5 0.0 1.0" />
+    <material name="brown" rgba="0.5 0.25 0.1 1.0" />
+    <material name="dark_grey" rgba="0.2 0.2 0.2 1.0" />
+    <material name="light_blue" rgba="0.5 0.8 1.0 1.0" />
+    <material name="dark_green" rgba="0.0 0.5 0.0 1.0" />
+    <material name="glass" rgba="0.8 0.9 1.0 0.3" />
+    <material name="red_glass" rgba="1.0 0.2 0.2 0.5" />
+    <texture name="grass_tex" type="2d" file="test_scene_v1/Grass.png" rgb1="1 1 1" />
+    <texture name="road_tex" type="2d" file="test_scene_v1/Road.png" rgb1="1 1 1" />
+    <texture name="Sidewalk_tex" type="2d" file="test_scene_v1/Sidewalk.png" rgb1="1 1 1" />
+    <texture name="Water_tex" type="2d" file="test_scene_v1/Water.png" rgb1="1 1 1" />
+    <texture name="Office_1D_tex" type="2d" file="test_scene_v1/Office_1D.png" rgb1="1 1 1" />
+    <material name="Office_1D_mat" texture="Office_1D_tex" texrepeat="1 1" texuniform="true" emission="0.8" specular="0.0" shininess="0.0" />
+    <texture name="Building_Roof_tex" type="2d" file="test_scene_v1/Building_Roof.png" rgb1="1 1 1" />
+    <material name="Building_Roof_mat" texture="Building_Roof_tex" texrepeat="1 1" texuniform="true" emission="0.8" specular="0.0" shininess="0.0" />
+    <texture name="Building_Wall_1_tex" type="2d" file="test_scene_v1/Building_Wall_1.png" rgb1="1 1 1" />
+    <material name="Building_Wall_1_tex_mat" texture="Building_Wall_1_tex" texrepeat="1 1" texuniform="true" emission="0.8" specular="0.0" shininess="0.0" />
+    <texture name="Building_Wall_2_tex" type="2d" file="test_scene_v1/Building_Wall_2.png" rgb1="1 1 1" />
+    <material name="Building_Wall_2_tex_mat" texture="Building_Wall_2_tex" texrepeat="1 1" texuniform="true" emission="0.8" specular="0.0" shininess="0.0" />
+    <texture name="Concrete_1_tex" type="2d" file="test_scene_v1/Concrete_1.png" rgb1="1 1 1" />
+    <material name="Concrete_1_tex_mat" texture="Concrete_1_tex" texrepeat="1 1" texuniform="true" emission="0.8" specular="0.0" shininess="0.0" />
+    <texture name="Concrete_2_tex" type="2d" file="test_scene_v1/Concrete_2.png" rgb1="1 1 1" />
+    <material name="Concrete_2_tex_mat" texture="Concrete_2_tex" texrepeat="1 1" texuniform="true" emission="0.8" specular="0.0" shininess="0.0" />
+    <texture name="Cream_Marble_Slab_tex" type="2d" file="test_scene_v1/Cream_Marble_Slab.png" rgb1="1 1 1" />
+    <material name="Cream_Marble_Slab_tex_mat" texture="Cream_Marble_Slab_tex" texrepeat="1 1" texuniform="true" emission="0.8" specular="0.0" shininess="0.0" />
+    <texture name="Office_1A_tex" type="2d" file="test_scene_v1/Office_1A.png" rgb1="1 1 1" />
+    <material name="Office_1A_tex_mat" texture="Office_1A_tex" texrepeat="1 1" texuniform="true" emission="0.8" specular="0.0" shininess="0.0" />
+    <texture name="Office_1B_tex" type="2d" file="test_scene_v1/Office_1B.png" rgb1="1 1 1" />
+    <material name="Office_1B_tex_mat" texture="Office_1B_tex" texrepeat="1 1" texuniform="true" emission="0.8" specular="0.0" shininess="0.0" />
+    <texture name="Office_1C_tex" type="2d" file="test_scene_v1/Office_1C.png" rgb1="1 1 1" />
+    <material name="Office_1C_tex_mat" texture="Office_1C_tex" texrepeat="1 1" texuniform="true" emission="0.8" specular="0.0" shininess="0.0" />
+    <texture name="Office_2A_tex" type="2d" file="test_scene_v1/Office_2A.png" rgb1="1 1 1" />
+    <material name="Office_2A_tex_mat" texture="Office_2A_tex" texrepeat="1 1" texuniform="true" emission="0.8" specular="0.0" shininess="0.0" />
+    <texture name="Office_2B_tex" type="2d" file="test_scene_v1/Office_2B.png" rgb1="1 1 1" />
+    <material name="Office_2B_tex_mat" texture="Office_2B_tex" texrepeat="1 1" texuniform="true" emission="0.8" specular="0.0" shininess="0.0" />
+    <texture name="Office_2C_tex" type="2d" file="test_scene_v1/Office_2C.png" rgb1="1 1 1" />
+    <material name="Office_2C_tex_mat" texture="Office_2C_tex" texrepeat="1 1" texuniform="true" emission="0.8" specular="0.0" shininess="0.0" />
+    <texture name="Office_3A_tex" type="2d" file="test_scene_v1/Office_3A.png" rgb1="1 1 1" />
+    <material name="Office_3A_tex_mat" texture="Office_3A_tex" texrepeat="1 1" texuniform="true" emission="0.8" specular="0.0" shininess="0.0" />
+    <texture name="Office_3B_tex" type="2d" file="test_scene_v1/Office_3B.png" rgb1="1 1 1" />
+    <material name="Office_3B_tex_mat" texture="Office_3B_tex" texrepeat="1 1" texuniform="true" emission="0.8" specular="0.0" shininess="0.0" />
+    <texture name="Parking_Interior_tex" type="2d" file="test_scene_v1/Parking_Interior.png" rgb1="1 1 1" />
+    <material name="Parking_Interior_tex_mat" texture="Parking_Interior_tex" texrepeat="1 1" texuniform="true" emission="0.8" specular="0.0" shininess="0.0" />
+    <texture name="Stone_Bricks_tex" type="2d" file="test_scene_v1/Stone_Bricks.png" rgb1="1 1 1" />
+    <material name="Stone_Bricks_tex_mat" texture="Stone_Bricks_tex" texrepeat="1 1" texuniform="true" emission="0.8" specular="0.0" shininess="0.0" />
+    <material name="grass_mat" texture="grass_tex" texrepeat="1 1" texuniform="true" emission="0.8" specular="0.0" shininess="0.0" />
+    <material name="road_mat" texture="road_tex" texrepeat="1 1" texuniform="true" emission="0.8" specular="0.0" shininess="0.0" />
+    <material name="Sidewalk_mat" texture="Sidewalk_tex" texrepeat="1 1" texuniform="true" emission="0.8" specular="0.0" shininess="0.0" />
+    <material name="Water_mat" texture="Water_tex" texrepeat="1 1" texuniform="true" emission="0.8" specular="0.0" shininess="0.0" />
+    <mesh name="Building_Wall_1_1" file="test_scene_v1/Building_Wall_1/pavilion_001.obj" scale="10 10 10" />
+    <mesh name="Building_Wall_1_2" file="test_scene_v1/Building_Wall_1/pavilion_002.obj" scale="10 10 10" />
+    <mesh name="Building_Wall_1_3" file="test_scene_v1/Building_Wall_1/pavilion_003.obj" scale="10 10 10" />
+    <mesh name="Building_Wall_1_4" file="test_scene_v1/Building_Wall_1/pavilion_004.obj" scale="10 10 10" />
+    <mesh name="Building_Wall_1_5" file="test_scene_v1/Building_Wall_1/pavilion_005.obj" scale="10 10 10" />
+    <mesh name="Building_Wall_2_1" file="test_scene_v1/Building_Wall_2/pavilion_001.obj" scale="10 10 10" />
+    <mesh name="Building_Wall_2_2" file="test_scene_v1/Building_Wall_2/pavilion_002.obj" scale="10 10 10" />
+    <mesh name="Building_Wall_2_3" file="test_scene_v1/Building_Wall_2/pavilion_003.obj" scale="10 10 10" />
+    <mesh name="Building_Wall_2_4" file="test_scene_v1/Building_Wall_2/pavilion_004.obj" scale="10 10 10" />
+    <mesh name="Building_Wall_2_5" file="test_scene_v1/Building_Wall_2/pavilion_005.obj" scale="10 10 10" />
+    <mesh name="Building_Wall_2_6" file="test_scene_v1/Building_Wall_2/pavilion_006.obj" scale="10 10 10" />
+    <mesh name="Building_Wall_2_7" file="test_scene_v1/Building_Wall_2/pavilion_007.obj" scale="10 10 10" />
+
+    <mesh name="Concrete_1_1_1" file="test_scene_v1/pavilion_001/pavilion_002.obj" scale="10 10 10" />
+    <mesh name="Concrete_1_1_2" file="test_scene_v1/pavilion_001/pavilion_003.obj" scale="10 10 10" />
+
+
+    <mesh name="Concrete_1_2" file="test_scene_v1/Concrete_1/pavilion_002.obj" scale="10 10 10" />
+    <mesh name="Concrete_1_3" file="test_scene_v1/Concrete_1/pavilion_003.obj" scale="10 10 10" />
+<!--    <mesh name="Concrete_1_4" file="test_scene_v1/Concrete_1/pavilion_004.obj" scale="10 10 10" />-->
+    <mesh name="Concrete_1_4_1" file="test_scene_v1/pavilion_004/pavilion_002.obj" scale="10 10 10" />
+    <mesh name="Concrete_1_4_2" file="test_scene_v1/pavilion_004/pavilion_003.obj" scale="10 10 10" />
+
+
+<!--    <mesh name="Concrete_1_5" file="test_scene_v1/Concrete_1/pavilion_005.obj" scale="10 10 10" />-->
+    <mesh name="Concrete_1_5_1" file="test_scene_v1/pavilion_005/pavilion_001.obj" scale="10 10 10" />
+    <mesh name="Concrete_1_5_2" file="test_scene_v1/pavilion_005/pavilion_002.obj" scale="10 10 10" />
+    <mesh name="Concrete_1_5_3" file="test_scene_v1/pavilion_005/pavilion_003.obj" scale="10 10 10" />
+
+    <mesh name="Concrete_1_6" file="test_scene_v1/Concrete_1/pavilion_006.obj" scale="10 10 10" />
+    <mesh name="Concrete_1_7" file="test_scene_v1/Concrete_1/pavilion_007.obj" scale="10 10 10" />
+    <mesh name="Concrete_1_8" file="test_scene_v1/Concrete_1/pavilion_008.obj" scale="10 10 10" />
+    <mesh name="Concrete_2_1" file="test_scene_v1/Concrete_2/pavilion_001.obj" scale="10 10 10" />
+    <mesh name="Concrete_2_2" file="test_scene_v1/Concrete_2/pavilion_002.obj" scale="10 10 10" />
+    <mesh name="Concrete_2_3" file="test_scene_v1/Concrete_2/pavilion_003.obj" scale="10 10 10" />
+    <mesh name="Concrete_2_4" file="test_scene_v1/Concrete_2/pavilion_004.obj" scale="10 10 10" />
+    <mesh name="Concrete_2_5" file="test_scene_v1/Concrete_2/pavilion_005.obj" scale="10 10 10" />
+    <mesh name="Concrete_2_6" file="test_scene_v1/Concrete_2/pavilion_006.obj" scale="10 10 10" />
+    <mesh name="Concrete_2_7" file="test_scene_v1/Concrete_2/pavilion_007.obj" scale="10 10 10" />
+    <mesh name="Concrete_2_8" file="test_scene_v1/Concrete_2/pavilion_008.obj" scale="10 10 10" />
+    <mesh name="Office_1A_1" file="test_scene_v1/Office_1A/pavilion_001.obj" scale="10 10 10" />
+    <mesh name="Office_1A_2" file="test_scene_v1/Office_1A/pavilion_002.obj" scale="10 10 10" />
+    <mesh name="Office_1A_3" file="test_scene_v1/Office_1A/pavilion_003.obj" scale="10 10 10" />
+    <mesh name="Office_1A_4" file="test_scene_v1/Office_1A/pavilion_004.obj" scale="10 10 10" />
+    <mesh name="Office_1A_5" file="test_scene_v1/Office_1A/pavilion_005.obj" scale="10 10 10" />
+    <mesh name="Office_1A_6" file="test_scene_v1/Office_1A/pavilion_006.obj" scale="10 10 10" />
+    <mesh name="Office_1A_7" file="test_scene_v1/Office_1A/pavilion_007.obj" scale="10 10 10" />
+    <mesh name="Office_1A_8" file="test_scene_v1/Office_1A/pavilion_008.obj" scale="10 10 10" />
+    <mesh name="Office_1B_1" file="test_scene_v1/Office_1B/pavilion_001.obj" scale="10 10 10" />
+    <mesh name="Office_1B_2" file="test_scene_v1/Office_1B/pavilion_002.obj" scale="10 10 10" />
+    <mesh name="Office_1B_3" file="test_scene_v1/Office_1B/pavilion_003.obj" scale="10 10 10" />
+    <mesh name="Office_1B_4" file="test_scene_v1/Office_1B/pavilion_004.obj" scale="10 10 10" />
+    <mesh name="Office_1B_5" file="test_scene_v1/Office_1B/pavilion_005.obj" scale="10 10 10" />
+    <mesh name="Office_1B_6" file="test_scene_v1/Office_1B/pavilion_006.obj" scale="10 10 10" />
+    <mesh name="Office_1B_7" file="test_scene_v1/Office_1B/pavilion_007.obj" scale="10 10 10" />
+    <mesh name="Office_1B_8" file="test_scene_v1/Office_1B/pavilion_008.obj" scale="10 10 10" />
+    <mesh name="Office_1B_9" file="test_scene_v1/Office_1B/pavilion_009.obj" scale="10 10 10" />
+    <mesh name="Office_1B_10" file="test_scene_v1/Office_1B/pavilion_010.obj" scale="10 10 10" />
+    <mesh name="Office_1B_11" file="test_scene_v1/Office_1B/pavilion_011.obj" scale="10 10 10" />
+    <mesh name="Office_1B_12" file="test_scene_v1/Office_1B/pavilion_012.obj" scale="10 10 10" />
+    <mesh name="Office_1B_13" file="test_scene_v1/Office_1B/pavilion_013.obj" scale="10 10 10" />
+    <mesh name="Office_1C_1" file="test_scene_v1/Office_1C/pavilion_001.obj" scale="10 10 10" />
+    <mesh name="Office_1C_2" file="test_scene_v1/Office_1C/pavilion_002.obj" scale="10 10 10" />
+    <mesh name="Office_1C_3" file="test_scene_v1/Office_1C/pavilion_003.obj" scale="10 10 10" />
+    <mesh name="Office_1C_4" file="test_scene_v1/Office_1C/pavilion_004.obj" scale="10 10 10" />
+    <mesh name="Office_1C_5" file="test_scene_v1/Office_1C/pavilion_005.obj" scale="10 10 10" />
+    <mesh name="Office_1C_6" file="test_scene_v1/Office_1C/pavilion_006.obj" scale="10 10 10" />
+    <mesh name="Office_1C_7" file="test_scene_v1/Office_1C/pavilion_007.obj" scale="10 10 10" />
+    <mesh name="Office_1C_8" file="test_scene_v1/Office_1C/pavilion_008.obj" scale="10 10 10" />
+    <mesh name="Office_1C_9" file="test_scene_v1/Office_1C/pavilion_009.obj" scale="10 10 10" />
+    <mesh name="Office_1C_10" file="test_scene_v1/Office_1C/pavilion_010.obj" scale="10 10 10" />
+    <mesh name="Office_1C_11" file="test_scene_v1/Office_1C/pavilion_011.obj" scale="10 10 10" />
+    <mesh name="Office_1C_12" file="test_scene_v1/Office_1C/pavilion_012.obj" scale="10 10 10" />
+    <mesh name="Office_1C_13" file="test_scene_v1/Office_1C/pavilion_013.obj" scale="10 10 10" />
+    <mesh name="Office_1D_1" file="test_scene_v1/Office_1D/pavilion_001.obj" scale="10 10 10" />
+    <mesh name="Office_1D_2" file="test_scene_v1/Office_1D/pavilion_002.obj" scale="10 10 10" />
+    <mesh name="Office_1D_3" file="test_scene_v1/Office_1D/pavilion_003.obj" scale="10 10 10" />
+    <mesh name="Office_1D_4" file="test_scene_v1/Office_1D/pavilion_004.obj" scale="10 10 10" />
+    <mesh name="Office_2A_1" file="test_scene_v1/Office_2A/pavilion_001.obj" scale="10 10 10" />
+    <mesh name="Office_2A_2" file="test_scene_v1/Office_2A/pavilion_002.obj" scale="10 10 10" />
+    <mesh name="Office_2A_3" file="test_scene_v1/Office_2A/pavilion_003.obj" scale="10 10 10" />
+    <mesh name="Office_2A_4" file="test_scene_v1/Office_2A/pavilion_004.obj" scale="10 10 10" />
+    <mesh name="Office_2B_1" file="test_scene_v1/Office_2B/pavilion_001.obj" scale="10 10 10" />
+    <mesh name="Office_2B_2" file="test_scene_v1/Office_2B/pavilion_002.obj" scale="10 10 10" />
+    <mesh name="Office_2B_3" file="test_scene_v1/Office_2B/pavilion_003.obj" scale="10 10 10" />
+    <mesh name="Office_2B_4" file="test_scene_v1/Office_2B/pavilion_004.obj" scale="10 10 10" />
+    <mesh name="Office_2B_5" file="test_scene_v1/Office_2B/pavilion_005.obj" scale="10 10 10" />
+    <mesh name="Office_2B_6" file="test_scene_v1/Office_2B/pavilion_006.obj" scale="10 10 10" />
+    <mesh name="Office_2B_7" file="test_scene_v1/Office_2B/pavilion_007.obj" scale="10 10 10" />
+    <mesh name="Office_2B_8" file="test_scene_v1/Office_2B/pavilion_008.obj" scale="10 10 10" />
+    <mesh name="Office_2B_9" file="test_scene_v1/Office_2B/pavilion_009.obj" scale="10 10 10" />
+    <mesh name="Office_2B_10" file="test_scene_v1/Office_2B/pavilion_010.obj" scale="10 10 10" />
+    <mesh name="Office_2B_11" file="test_scene_v1/Office_2B/pavilion_011.obj" scale="10 10 10" />
+    <mesh name="Office_2B_12" file="test_scene_v1/Office_2B/pavilion_012.obj" scale="10 10 10" />
+    <mesh name="Office_2B_13" file="test_scene_v1/Office_2B/pavilion_013.obj" scale="10 10 10" />
+    <mesh name="Office_2B_14" file="test_scene_v1/Office_2B/pavilion_014.obj" scale="10 10 10" />
+    <mesh name="Office_2C_1" file="test_scene_v1/Office_2C/pavilion_001.obj" scale="10 10 10" />
+    <mesh name="Office_2C_2" file="test_scene_v1/Office_2C/pavilion_002.obj" scale="10 10 10" />
+    <mesh name="Office_2C_3" file="test_scene_v1/Office_2C/pavilion_003.obj" scale="10 10 10" />
+    <mesh name="Office_2C_4" file="test_scene_v1/Office_2C/pavilion_004.obj" scale="10 10 10" />
+    <mesh name="Office_2C_5" file="test_scene_v1/Office_2C/pavilion_005.obj" scale="10 10 10" />
+    <mesh name="Office_2C_6" file="test_scene_v1/Office_2C/pavilion_006.obj" scale="10 10 10" />
+    <mesh name="Office_2C_7" file="test_scene_v1/Office_2C/pavilion_007.obj" scale="10 10 10" />
+    <mesh name="Office_2C_8" file="test_scene_v1/Office_2C/pavilion_008.obj" scale="10 10 10" />
+    <mesh name="Office_3A_1" file="test_scene_v1/Office_3A/pavilion_001.obj" scale="10 10 10" />
+    <mesh name="Office_3A_2" file="test_scene_v1/Office_3A/pavilion_002.obj" scale="10 10 10" />
+    <mesh name="Office_3A_3" file="test_scene_v1/Office_3A/pavilion_003.obj" scale="10 10 10" />
+    <mesh name="Office_3A_4" file="test_scene_v1/Office_3A/pavilion_004.obj" scale="10 10 10" />
+    <mesh name="Office_3A_5" file="test_scene_v1/Office_3A/pavilion_005.obj" scale="10 10 10" />
+    <mesh name="Office_3A_6" file="test_scene_v1/Office_3A/pavilion_006.obj" scale="10 10 10" />
+    <mesh name="Office_3A_7" file="test_scene_v1/Office_3A/pavilion_007.obj" scale="10 10 10" />
+    <mesh name="Office_3A_8" file="test_scene_v1/Office_3A/pavilion_008.obj" scale="10 10 10" />
+    <mesh name="Office_3A_9" file="test_scene_v1/Office_3A/pavilion_009.obj" scale="10 10 10" />
+    <mesh name="Office_3A_10" file="test_scene_v1/Office_3A/pavilion_010.obj" scale="10 10 10" />
+    <mesh name="Office_3A_11" file="test_scene_v1/Office_3A/pavilion_011.obj" scale="10 10 10" />
+    <mesh name="Office_3A_12" file="test_scene_v1/Office_3A/pavilion_012.obj" scale="10 10 10" />
+    <mesh name="Office_3A_13" file="test_scene_v1/Office_3A/pavilion_013.obj" scale="10 10 10" />
+    <mesh name="Office_3A_14" file="test_scene_v1/Office_3A/pavilion_014.obj" scale="10 10 10" />
+    <mesh name="Office_3A_15" file="test_scene_v1/Office_3A/pavilion_015.obj" scale="10 10 10" />
+    <mesh name="Office_3A_16" file="test_scene_v1/Office_3A/pavilion_016.obj" scale="10 10 10" />
+    <mesh name="Office_3A_17" file="test_scene_v1/Office_3A/pavilion_017.obj" scale="10 10 10" />
+    <mesh name="Office_3A_18" file="test_scene_v1/Office_3A/pavilion_018.obj" scale="10 10 10" />
+    <mesh name="Office_3A_19" file="test_scene_v1/Office_3A/pavilion_019.obj" scale="10 10 10" />
+    <mesh name="Office_3A_20" file="test_scene_v1/Office_3A/pavilion_020.obj" scale="10 10 10" />
+    <mesh name="Office_3A_21" file="test_scene_v1/Office_3A/pavilion_021.obj" scale="10 10 10" />
+    <mesh name="Office_3A_22" file="test_scene_v1/Office_3A/pavilion_022.obj" scale="10 10 10" />
+    <mesh name="Office_3A_23" file="test_scene_v1/Office_3A/pavilion_023.obj" scale="10 10 10" />
+    <mesh name="Office_3A_24" file="test_scene_v1/Office_3A/pavilion_024.obj" scale="10 10 10" />
+    <mesh name="Office_3A_25" file="test_scene_v1/Office_3A/pavilion_025.obj" scale="10 10 10" />
+    <mesh name="Office_3A_26" file="test_scene_v1/Office_3A/pavilion_026.obj" scale="10 10 10" />
+    <mesh name="Office_3A_27" file="test_scene_v1/Office_3A/pavilion_027.obj" scale="10 10 10" />
+    <mesh name="Office_3A_28" file="test_scene_v1/Office_3A/pavilion_028.obj" scale="10 10 10" />
+    <mesh name="Office_3A_29" file="test_scene_v1/Office_3A/pavilion_029.obj" scale="10 10 10" />
+    <mesh name="Office_3A_30" file="test_scene_v1/Office_3A/pavilion_030.obj" scale="10 10 10" />
+    <mesh name="Office_3A_31" file="test_scene_v1/Office_3A/pavilion_031.obj" scale="10 10 10" />
+    <mesh name="Office_3A_32" file="test_scene_v1/Office_3A/pavilion_032.obj" scale="10 10 10" />
+    <mesh name="Office_3A_33" file="test_scene_v1/Office_3A/pavilion_033.obj" scale="10 10 10" />
+    <mesh name="Office_3A_34" file="test_scene_v1/Office_3A/pavilion_034.obj" scale="10 10 10" />
+    <mesh name="Office_3A_35" file="test_scene_v1/Office_3A/pavilion_035.obj" scale="10 10 10" />
+    <mesh name="Office_3A_36" file="test_scene_v1/Office_3A/pavilion_036.obj" scale="10 10 10" />
+    <mesh name="Office_3A_37" file="test_scene_v1/Office_3A/pavilion_037.obj" scale="10 10 10" />
+    <mesh name="Office_3A_38" file="test_scene_v1/Office_3A/pavilion_038.obj" scale="10 10 10" />
+    <mesh name="Office_3A_39" file="test_scene_v1/Office_3A/pavilion_039.obj" scale="10 10 10" />
+    <mesh name="Office_3A_40" file="test_scene_v1/Office_3A/pavilion_040.obj" scale="10 10 10" />
+    <mesh name="Office_3A_41" file="test_scene_v1/Office_3A/pavilion_041.obj" scale="10 10 10" />
+    <mesh name="Office_3A_42" file="test_scene_v1/Office_3A/pavilion_042.obj" scale="10 10 10" />
+    <mesh name="Office_3B_1" file="test_scene_v1/Office_3B/pavilion_001.obj" scale="10 10 10" />
+    <mesh name="Office_3B_2" file="test_scene_v1/Office_3B/pavilion_002.obj" scale="10 10 10" />
+    <mesh name="Office_3B_3" file="test_scene_v1/Office_3B/pavilion_003.obj" scale="10 10 10" />
+    <mesh name="Office_3B_4" file="test_scene_v1/Office_3B/pavilion_004.obj" scale="10 10 10" />
+    <mesh name="Office_3B_5" file="test_scene_v1/Office_3B/pavilion_005.obj" scale="10 10 10" />
+    <mesh name="Office_3B_6" file="test_scene_v1/Office_3B/pavilion_006.obj" scale="10 10 10" />
+    <mesh name="Office_3B_7" file="test_scene_v1/Office_3B/pavilion_007.obj" scale="10 10 10" />
+    <mesh name="Office_3B_8" file="test_scene_v1/Office_3B/pavilion_008.obj" scale="10 10 10" />
+    <mesh name="Office_3B_9" file="test_scene_v1/Office_3B/pavilion_009.obj" scale="10 10 10" />
+    <mesh name="Office_3B_10" file="test_scene_v1/Office_3B/pavilion_010.obj" scale="10 10 10" />
+    <mesh name="Office_3B_11" file="test_scene_v1/Office_3B/pavilion_011.obj" scale="10 10 10" />
+    <mesh name="Office_3B_12" file="test_scene_v1/Office_3B/pavilion_012.obj" scale="10 10 10" />
+    <mesh name="Office_3B_13" file="test_scene_v1/Office_3B/pavilion_013.obj" scale="10 10 10" />
+    <mesh name="Office_3B_14" file="test_scene_v1/Office_3B/pavilion_014.obj" scale="10 10 10" />
+    <mesh name="Office_3B_15" file="test_scene_v1/Office_3B/pavilion_015.obj" scale="10 10 10" />
+    <mesh name="Office_3B_16" file="test_scene_v1/Office_3B/pavilion_016.obj" scale="10 10 10" />
+    <mesh name="Office_3B_17" file="test_scene_v1/Office_3B/pavilion_017.obj" scale="10 10 10" />
+    <mesh name="Parking_Interior_1" file="test_scene_v1/Parking_Interior/pavilion_001.obj" scale="10 10 10" />
+    <mesh name="Parking_Interior_2" file="test_scene_v1/Parking_Interior/pavilion_002.obj" scale="10 10 10" />
+    <mesh name="Parking_Interior_3" file="test_scene_v1/Parking_Interior/pavilion_003.obj" scale="10 10 10" />
+    <mesh name="Parking_Interior_4" file="test_scene_v1/Parking_Interior/pavilion_004.obj" scale="10 10 10" />
+    <mesh name="Parking_Interior_5" file="test_scene_v1/Parking_Interior/pavilion_005.obj" scale="10 10 10" />
+    <mesh name="Parking_Interior_6" file="test_scene_v1/Parking_Interior/pavilion_006.obj" scale="10 10 10" />
+    <mesh name="Parking_Interior_7" file="test_scene_v1/Parking_Interior/pavilion_007.obj" scale="10 10 10" />
+    <mesh name="Parking_Interior_8" file="test_scene_v1/Parking_Interior/pavilion_008.obj" scale="10 10 10" />
+    <mesh name="Parking_Interior_9" file="test_scene_v1/Parking_Interior/pavilion_009.obj" scale="10 10 10" />
+    <mesh name="Parking_Interior_10" file="test_scene_v1/Parking_Interior/pavilion_010.obj" scale="10 10 10" />
+    <mesh name="Parking_Interior_11" file="test_scene_v1/Parking_Interior/pavilion_011.obj" scale="10 10 10" />
+    <mesh name="Parking_Interior_12" file="test_scene_v1/Parking_Interior/pavilion_012.obj" scale="10 10 10" />
+    <mesh name="Parking_Interior_13" file="test_scene_v1/Parking_Interior/pavilion_013.obj" scale="10 10 10" />
+    <mesh name="Parking_Interior_14" file="test_scene_v1/Parking_Interior/pavilion_014.obj" scale="10 10 10" />
+    <mesh name="Parking_Interior_15" file="test_scene_v1/Parking_Interior/pavilion_015.obj" scale="10 10 10" />
+    <mesh name="Parking_Interior_16" file="test_scene_v1/Parking_Interior/pavilion_016.obj" scale="10 10 10" />
+    <mesh name="Parking_Interior_17" file="test_scene_v1/Parking_Interior/pavilion_017.obj" scale="10 10 10" />
+    <mesh name="Parking_Interior_18" file="test_scene_v1/Parking_Interior/pavilion_018.obj" scale="10 10 10" />
+    <mesh name="Parking_Interior_19" file="test_scene_v1/Parking_Interior/pavilion_019.obj" scale="10 10 10" />
+    <mesh name="Parking_Interior_20" file="test_scene_v1/Parking_Interior/pavilion_020.obj" scale="10 10 10" />
+    <mesh name="Parking_Interior_21" file="test_scene_v1/Parking_Interior/pavilion_021.obj" scale="10 10 10" />
+    <mesh name="Parking_Interior_22" file="test_scene_v1/Parking_Interior/pavilion_022.obj" scale="10 10 10" />
+    <mesh name="Parking_Interior_23" file="test_scene_v1/Parking_Interior/pavilion_023.obj" scale="10 10 10" />
+    <mesh name="Parking_Interior_24" file="test_scene_v1/Parking_Interior/pavilion_024.obj" scale="10 10 10" />
+    <mesh name="Parking_Interior_25" file="test_scene_v1/Parking_Interior/pavilion_025.obj" scale="10 10 10" />
+    <mesh name="Parking_Interior_26" file="test_scene_v1/Parking_Interior/pavilion_026.obj" scale="10 10 10" />
+    <mesh name="Parking_Interior_27" file="test_scene_v1/Parking_Interior/pavilion_027.obj" scale="10 10 10" />
+    <mesh name="Parking_Interior_28" file="test_scene_v1/Parking_Interior/pavilion_028.obj" scale="10 10 10" />
+    <mesh name="Parking_Interior_29" file="test_scene_v1/Parking_Interior/pavilion_029.obj" scale="10 10 10" />
+    <mesh name="Parking_Interior_30" file="test_scene_v1/Parking_Interior/pavilion_030.obj" scale="10 10 10" />
+    <mesh name="Parking_Interior_31" file="test_scene_v1/Parking_Interior/pavilion_031.obj" scale="10 10 10" />
+    <mesh name="Parking_Interior_32" file="test_scene_v1/Parking_Interior/pavilion_032.obj" scale="10 10 10" />
+    <mesh name="Parking_Interior_33" file="test_scene_v1/Parking_Interior/pavilion_033.obj" scale="10 10 10" />
+    <mesh name="Parking_Interior_34" file="test_scene_v1/Parking_Interior/pavilion_034.obj" scale="10 10 10" />
+    <mesh name="Parking_Interior_35" file="test_scene_v1/Parking_Interior/pavilion_035.obj" scale="10 10 10" />
+    <mesh name="Parking_Interior_36" file="test_scene_v1/Parking_Interior/pavilion_036.obj" scale="10 10 10" />
+    <mesh name="Parking_Interior_37" file="test_scene_v1/Parking_Interior/pavilion_037.obj" scale="10 10 10" />
+    <mesh name="Parking_Interior_38" file="test_scene_v1/Parking_Interior/pavilion_038.obj" scale="10 10 10" />
+    <mesh name="Parking_Interior_39" file="test_scene_v1/Parking_Interior/pavilion_039.obj" scale="10 10 10" />
+    <mesh name="Parking_Interior_40" file="test_scene_v1/Parking_Interior/pavilion_040.obj" scale="10 10 10" />
+    <mesh name="Parking_Interior_41" file="test_scene_v1/Parking_Interior/pavilion_041.obj" scale="10 10 10" />
+    <mesh name="Parking_Interior_42" file="test_scene_v1/Parking_Interior/pavilion_042.obj" scale="10 10 10" />
+    <mesh name="Parking_Interior_43" file="test_scene_v1/Parking_Interior/pavilion_043.obj" scale="10 10 10" />
+    <mesh name="Parking_Interior_44" file="test_scene_v1/Parking_Interior/pavilion_044.obj" scale="10 10 10" />
+    <mesh name="Parking_Interior_45" file="test_scene_v1/Parking_Interior/pavilion_045.obj" scale="10 10 10" />
+    <mesh name="Parking_Interior_46" file="test_scene_v1/Parking_Interior/pavilion_046.obj" scale="10 10 10" />
+    <mesh name="Parking_Interior_47" file="test_scene_v1/Parking_Interior/pavilion_047.obj" scale="10 10 10" />
+    <mesh name="Parking_Interior_48" file="test_scene_v1/Parking_Interior/pavilion_048.obj" scale="10 10 10" />
+    <mesh name="Parking_Interior_49" file="test_scene_v1/Parking_Interior/pavilion_049.obj" scale="10 10 10" />
+    <mesh name="Parking_Interior_50" file="test_scene_v1/Parking_Interior/pavilion_050.obj" scale="10 10 10" />
+    <mesh name="Parking_Interior_51" file="test_scene_v1/Parking_Interior/pavilion_051.obj" scale="10 10 10" />
+    <mesh name="Parking_Interior_52" file="test_scene_v1/Parking_Interior/pavilion_052.obj" scale="10 10 10" />
+    <mesh name="Parking_Interior_53" file="test_scene_v1/Parking_Interior/pavilion_053.obj" scale="10 10 10" />
+    <mesh name="Parking_Interior_54" file="test_scene_v1/Parking_Interior/pavilion_054.obj" scale="10 10 10" />
+    <mesh name="Parking_Interior_55" file="test_scene_v1/Parking_Interior/pavilion_055.obj" scale="10 10 10" />
+    <mesh name="Parking_Interior_56" file="test_scene_v1/Parking_Interior/pavilion_056.obj" scale="10 10 10" />
+    <mesh name="Parking_Interior_57" file="test_scene_v1/Parking_Interior/pavilion_057.obj" scale="10 10 10" />
+    <mesh name="Parking_Interior_58" file="test_scene_v1/Parking_Interior/pavilion_058.obj" scale="10 10 10" />
+    <mesh name="Parking_Interior_59" file="test_scene_v1/Parking_Interior/pavilion_059.obj" scale="10 10 10" />
+    <mesh name="Parking_Interior_60" file="test_scene_v1/Parking_Interior/pavilion_060.obj" scale="10 10 10" />
+    <mesh name="Parking_Interior_61" file="test_scene_v1/Parking_Interior/pavilion_061.obj" scale="10 10 10" />
+    <mesh name="Parking_Interior_62" file="test_scene_v1/Parking_Interior/pavilion_062.obj" scale="10 10 10" />
+    <mesh name="Parking_Interior_63" file="test_scene_v1/Parking_Interior/pavilion_063.obj" scale="10 10 10" />
+    <mesh name="Parking_Interior_64" file="test_scene_v1/Parking_Interior/pavilion_064.obj" scale="10 10 10" />
+    <mesh name="Parking_Interior_65" file="test_scene_v1/Parking_Interior/pavilion_065.obj" scale="10 10 10" />
+    <mesh name="Parking_Interior_66" file="test_scene_v1/Parking_Interior/pavilion_066.obj" scale="10 10 10" />
+    <mesh name="Stone_Bricks_1" file="test_scene_v1/Stone_Bricks/pavilion_001.obj" scale="10 10 10" />
+    <mesh name="Stone_Bricks_2" file="test_scene_v1/Stone_Bricks/pavilion_002.obj" scale="10 10 10" />
+    <mesh name="Stone_Bricks_3" file="test_scene_v1/Stone_Bricks/pavilion_003.obj" scale="10 10 10" />
+    <mesh name="Stone_Bricks_4" file="test_scene_v1/Stone_Bricks/pavilion_004.obj" scale="10 10 10" />
+<!--    <mesh name="Stone_Bricks_5" file="test_scene_v1/Stone_Bricks/pavilion_005.obj" scale="10 10 10" />-->
+<!--    <mesh name="Stone_Bricks_6" file="test_scene_v1/Stone_Bricks/pavilion_006.obj" scale="10 10 10" />-->
+    <mesh name="Stone_Bricks_5_1" file="test_scene_v1/Stone_Brickspavilion_005/pavilion_001.obj" scale="10 10 10" />
+    <mesh name="Stone_Bricks_5_2" file="test_scene_v1/Stone_Brickspavilion_005/pavilion_002.obj" scale="10 10 10" />
+
+    <mesh name="Stone_Bricks_6_1" file="test_scene_v1/Stone_Brickspavilion_006/pavilion_001.obj" scale="10 10 10" />
+    <mesh name="Stone_Bricks_6_2" file="test_scene_v1/Stone_Brickspavilion_006/pavilion_002.obj" scale="10 10 10" />
+    <mesh name="Stone_Bricks_6_3" file="test_scene_v1/Stone_Brickspavilion_006/pavilion_003.obj" scale="10 10 10" />
+    <mesh name="Stone_Bricks_6_4" file="test_scene_v1/Stone_Brickspavilion_006/pavilion_004.obj" scale="10 10 10" />
+    <mesh name="Stone_Bricks_6_5" file="test_scene_v1/Stone_Brickspavilion_006/pavilion_005.obj" scale="10 10 10" />
+    <mesh name="Stone_Bricks_6_6" file="test_scene_v1/Stone_Brickspavilion_006/pavilion_006.obj" scale="10 10 10" />
+
+
+    <mesh name="Stone_Bricks_7" file="test_scene_v1/Stone_Bricks/pavilion_007.obj" scale="10 10 10" />
+    <mesh name="Stone_Bricks_8" file="test_scene_v1/Stone_Bricks/pavilion_008.obj" scale="10 10 10" />
+    <mesh name="Stone_Bricks_9" file="test_scene_v1/Stone_Bricks/pavilion_009.obj" scale="10 10 10" />
+
+    <mesh name="Water_1" file="test_scene_v1/Water/pavilion_001.obj" scale="10 10 10"/>
+    <mesh name="Water_2" file="test_scene_v1/Water/pavilion_002.obj" scale="10 10 10"/>
+
+    <mesh name="Building_Roof_1" file="test_scene_v1/Building_Roof/component_001.obj" scale="10 10 10"/>
+    <mesh name="Building_Roof_2" file="test_scene_v1/Building_Roof/component_002.obj" scale="10 10 10"/>
+    <mesh name="Building_Roof_3" file="test_scene_v1/Building_Roof/component_003.obj" scale="10 10 10"/>
+    <mesh name="Building_Roof_4" file="test_scene_v1/Building_Roof/component_004.obj" scale="10 10 10"/>
+    <mesh name="Building_Roof_5" file="test_scene_v1/Building_Roof/component_005.obj" scale="10 10 10"/>
+    <mesh name="Building_Roof_6" file="test_scene_v1/Building_Roof/component_006.obj" scale="10 10 10"/>
+    <mesh name="Building_Roof_7" file="test_scene_v1/Building_Roof/component_007.obj" scale="10 10 10"/>
+    <mesh name="Building_Roof_8" file="test_scene_v1/Building_Roof/component_008.obj" scale="10 10 10"/>
+    <mesh name="Building_Roof_9" file="test_scene_v1/Building_Roof/component_009.obj" scale="10 10 10"/>
+    <mesh name="Building_Roof_10" file="test_scene_v1/Building_Roof/component_010.obj" scale="10 10 10"/>
+    <mesh name="Building_Roof_11" file="test_scene_v1/Building_Roof/component_011.obj" scale="10 10 10"/>
+    <mesh name="Building_Roof_12" file="test_scene_v1/Building_Roof/component_012.obj" scale="10 10 10"/>
+    <mesh name="Building_Roof_13" file="test_scene_v1/Building_Roof/component_013.obj" scale="10 10 10"/>
+    <mesh name="Building_Roof_14" file="test_scene_v1/Building_Roof/component_014.obj" scale="10 10 10"/>
+    <mesh name="Building_Roof_15" file="test_scene_v1/Building_Roof/component_015.obj" scale="10 10 10"/>
+    <mesh name="Building_Roof_16" file="test_scene_v1/Building_Roof/component_016.obj" scale="10 10 10"/>
+    <mesh name="Building_Roof_17" file="test_scene_v1/Building_Roof/component_017.obj" scale="10 10 10"/>
+    <mesh name="Building_Roof_18" file="test_scene_v1/Building_Roof/component_018.obj" scale="10 10 10"/>
+
+    <mesh name="Cream_Marble_1_Slab" file="test_scene_v1/Cream_Marble_Slab/pavilion_001.obj" scale="10 10 10"/>
+    <mesh name="Cream_Marble_2_Slab" file="test_scene_v1/Cream_Marble_Slab/pavilion_002.obj" scale="10 10 10"/>
+  </asset>
+  <worldbody>
+
+    <body name="Water_body_1" pos="0 0 -7">
+        <geom mesh="Water_1" material="Water_mat" class="visual_1" />
+        <geom name="Water_1" mesh="Water_1" class="collision_1" />
+      </body>
+    <body name="Water_body_2" pos="0 0 -7">
+        <geom mesh="Water_2" material="Water_mat" class="visual_1" />
+        <geom name="Water_2" mesh="Water_2" class="collision_1" />
+      </body>
+
+    <body name="Building_Roof_1_body" pos="0 0 -7">
+        <geom mesh="Building_Roof_1" material="Building_Roof_mat" class="visual_1" />
+        <geom name="Building_Roof_1" mesh="Building_Roof_1" class="collision_1" />
+      </body>
+
+    <body name="Building_Roof_2_body" pos="0 0 -7">
+        <geom mesh="Building_Roof_2" material="Building_Roof_mat" class="visual_1" />
+        <geom name="Building_Roof_2" mesh="Building_Roof_2" class="collision_1" />
+      </body>
+
+    <body name="Building_Roof_3_body" pos="0 0 -7">
+        <geom mesh="Building_Roof_3" material="Building_Roof_mat" class="visual_1" />
+        <geom name="Building_Roof_3" mesh="Building_Roof_3" class="collision_1" />
+      </body>
+
+    <body name="Building_Roof_4_body" pos="0 0 -7">
+        <geom mesh="Building_Roof_4" material="Building_Roof_mat" class="visual_1" />
+        <geom name="Building_Roof_4" mesh="Building_Roof_4" class="collision_1" />
+      </body>
+
+    <body name="Building_Roof_5_body" pos="0 0 -7">
+        <geom mesh="Building_Roof_5" material="Building_Roof_mat" class="visual_1" />
+        <geom name="Building_Roof_5" mesh="Building_Roof_5" class="collision_1" />
+      </body>
+    <body name="Building_Roof_6_body" pos="0 0 -7">
+        <geom mesh="Building_Roof_6" material="Building_Roof_mat" class="visual_1" />
+        <geom name="Building_Roof_6" mesh="Building_Roof_6" class="collision_1" />
+      </body>
+    <body name="Building_Roof_7_body" pos="0 0 -7">
+        <geom mesh="Building_Roof_7" material="Building_Roof_mat" class="visual_1" />
+        <geom name="Building_Roof_7" mesh="Building_Roof_7" class="collision_1" />
+      </body>
+    <body name="Building_Roof_8_body" pos="0 0 -7">
+        <geom mesh="Building_Roof_8" material="Building_Roof_mat" class="visual_1" />
+        <geom name="Building_Roof_8" mesh="Building_Roof_8" class="collision_1" />
+      </body>
+    <body name="Building_Roof_9_body" pos="0 0 -7">
+        <geom mesh="Building_Roof_9" material="Building_Roof_mat" class="visual_1" />
+        <geom name="Building_Roof_9" mesh="Building_Roof_9" class="collision_1" />
+      </body>
+    <body name="Building_Roof_10_body" pos="0 0 -7">
+        <geom mesh="Building_Roof_10" material="Building_Roof_mat" class="visual_1" />
+        <geom name="Building_Roof_10" mesh="Building_Roof_10" class="collision_1" />
+      </body>
+    <body name="Building_Roof_11_body" pos="0 0 -7">
+        <geom mesh="Building_Roof_11" material="Building_Roof_mat" class="visual_1" />
+        <geom name="Building_Roof_11" mesh="Building_Roof_11" class="collision_1" />
+      </body>
+    <body name="Building_Roof_12_body" pos="0 0 -7">
+        <geom mesh="Building_Roof_12" material="Building_Roof_mat" class="visual_1" />
+        <geom name="Building_Roof_12" mesh="Building_Roof_12" class="collision_1" />
+      </body>
+    <body name="Building_Roof_13_body" pos="0 0 -7">
+        <geom mesh="Building_Roof_13" material="Building_Roof_mat" class="visual_1" />
+        <geom name="Building_Roof_13" mesh="Building_Roof_13" class="collision_1" />
+      </body>
+    <body name="Building_Roof_14_body" pos="0 0 -7">
+        <geom mesh="Building_Roof_14" material="Building_Roof_mat" class="visual_1" />
+        <geom name="Building_Roof_14" mesh="Building_Roof_14" class="collision_1" />
+      </body>
+    <body name="Building_Roof_15_body" pos="0 0 -7">
+        <geom mesh="Building_Roof_15" material="Building_Roof_mat" class="visual_1" />
+        <geom name="Building_Roof_15" mesh="Building_Roof_15" class="collision_1" />
+      </body>
+    <body name="Building_Roof_16_body" pos="0 0 -7">
+        <geom mesh="Building_Roof_16" material="Building_Roof_mat" class="visual_1" />
+        <geom name="Building_Roof_16" mesh="Building_Roof_16" class="collision_1" />
+      </body>
+    <body name="Building_Roof_17_body" pos="0 0 -7">
+        <geom mesh="Building_Roof_17" material="Building_Roof_mat" class="visual_1" />
+        <geom name="Building_Roof_17" mesh="Building_Roof_17" class="collision_1" />
+      </body>
+    <body name="Building_Roof_18_body" pos="0 0 -7">
+        <geom mesh="Building_Roof_18" material="Building_Roof_mat" class="visual_1" />
+        <geom name="Building_Roof_18" mesh="Building_Roof_18" class="collision_1" />
+      </body>
+
+      <body name="Cream_Marble_Slab_1_body" pos="0 0 -7">
+        <geom mesh="Cream_Marble_1_Slab" material="Cream_Marble_Slab_tex_mat" class="visual_1" />
+        <geom name="Cream_Marble_1_Slab" mesh="Cream_Marble_1_Slab" class="collision_1" />
+      </body>
+
+      <body name="Cream_Marble_Slab_2_body" pos="0 0 -7">
+        <geom mesh="Cream_Marble_2_Slab" material="Cream_Marble_Slab_tex_mat" class="visual_1" />
+        <geom name="Cream_Marble_2_Slab" mesh="Cream_Marble_2_Slab" class="collision_1" />
+      </body>
+    <body name="Building_Wall_1_body_1" pos="0 0 -7">
+      <geom mesh="Building_Wall_1_1" material="Building_Wall_1_tex_mat" class="visual_1" />
+      <geom name="Building_Wall_1_1" mesh="Building_Wall_1_1" class="collision_1" />
+    </body>
+    <body name="Building_Wall_1_body_2" pos="0 0 -7">
+      <geom mesh="Building_Wall_1_2" material="Building_Wall_1_tex_mat" class="visual_1" />
+      <geom name="Building_Wall_1_2" mesh="Building_Wall_1_2" class="collision_1" />
+    </body>
+    <body name="Building_Wall_1_body_3" pos="0 0 -7">
+      <geom mesh="Building_Wall_1_3" material="Building_Wall_1_tex_mat" class="visual_1" />
+      <geom name="Building_Wall_1_3" mesh="Building_Wall_1_3" class="collision_1" />
+    </body>
+    <body name="Building_Wall_1_body_4" pos="0 0 -7">
+      <geom mesh="Building_Wall_1_4" material="Building_Wall_1_tex_mat" class="visual_1" />
+      <geom name="Building_Wall_1_4" mesh="Building_Wall_1_4" class="collision_1" />
+    </body>
+    <body name="Building_Wall_1_body_5" pos="0 0 -7">
+      <geom mesh="Building_Wall_1_5" material="Building_Wall_1_tex_mat" class="visual_1" />
+      <geom name="Building_Wall_1_5" mesh="Building_Wall_1_5" class="collision_1" />
+    </body>
+    <body name="Building_Wall_2_body_1" pos="0 0 -7">
+      <geom mesh="Building_Wall_2_1" material="Building_Wall_2_tex_mat" class="visual_1" />
+      <geom name="Building_Wall_2_1" mesh="Building_Wall_2_1" class="collision_1" />
+    </body>
+    <body name="Building_Wall_2_body_2" pos="0 0 -7">
+      <geom mesh="Building_Wall_2_2" material="Building_Wall_2_tex_mat" class="visual_1" />
+      <geom name="Building_Wall_2_2" mesh="Building_Wall_2_2" class="collision_1" />
+    </body>
+    <body name="Building_Wall_2_body_3" pos="0 0 -7">
+      <geom mesh="Building_Wall_2_3" material="Building_Wall_2_tex_mat" class="visual_1" />
+      <geom name="Building_Wall_2_3" mesh="Building_Wall_2_3" class="collision_1" />
+    </body>
+    <body name="Building_Wall_2_body_4" pos="0 0 -7">
+      <geom mesh="Building_Wall_2_4" material="Building_Wall_2_tex_mat" class="visual_1" />
+      <geom name="Building_Wall_2_4" mesh="Building_Wall_2_4" class="collision_1" />
+    </body>
+    <body name="Building_Wall_2_body_5" pos="0 0 -7">
+      <geom mesh="Building_Wall_2_5" material="Building_Wall_2_tex_mat" class="visual_1" />
+      <geom name="Building_Wall_2_5" mesh="Building_Wall_2_5" class="collision_1" />
+    </body>
+    <body name="Building_Wall_2_body_6" pos="0 0 -7">
+      <geom mesh="Building_Wall_2_6" material="Building_Wall_2_tex_mat" class="visual_1" />
+      <geom name="Building_Wall_2_6" mesh="Building_Wall_2_6" class="collision_1" />
+    </body>
+    <body name="Building_Wall_2_body_7" pos="0 0 -7">
+      <geom mesh="Building_Wall_2_7" material="Building_Wall_2_tex_mat" class="visual_1" />
+      <geom name="Building_Wall_2_7" mesh="Building_Wall_2_7" class="collision_1" />
+    </body>
+
+    <body name="Concrete_1_body_1_1" pos="0 0 -7">
+      <geom mesh="Concrete_1_1_1" material="Concrete_1_tex_mat" class="visual_1" />
+      <geom name="Concrete_1_1_1" mesh="Concrete_1_1_1" class="collision_1" />
+    </body>
+    <body name="Concrete_1_body_1_2" pos="0 0 -7">
+      <geom mesh="Concrete_1_1_2" material="Concrete_1_tex_mat" class="visual_1" />
+      <geom name="Concrete_1_1_2" mesh="Concrete_1_1_2" class="collision_1" />
+    </body>
+
+    <body name="Concrete_1_body_2" pos="0 0 -7">
+      <geom mesh="Concrete_1_2" material="Concrete_1_tex_mat" class="visual_1" />
+      <geom name="Concrete_1_2" mesh="Concrete_1_2" class="collision_1" />
+    </body>
+    <body name="Concrete_1_body_3" pos="0 0 -7">
+      <geom mesh="Concrete_1_3" material="Concrete_1_tex_mat" class="visual_1" />
+      <geom name="Concrete_1_3" mesh="Concrete_1_3" class="collision_1" />
+    </body>
+    <body name="Concrete_1_body_4_1" pos="0 0 -7">
+      <geom mesh="Concrete_1_4_1" material="Concrete_1_tex_mat" class="visual_1" />
+      <geom name="Concrete_1_4_1" mesh="Concrete_1_4_1" class="collision_1" />
+    </body>
+    <body name="Concrete_1_body_4_2" pos="0 0 -7">
+      <geom mesh="Concrete_1_4_2" material="Concrete_1_tex_mat" class="visual_1" />
+      <geom name="Concrete_1_4_2" mesh="Concrete_1_4_2" class="collision_1" />
+    </body>
+    <body name="Concrete_1_body_5_1" pos="0 0 -7">
+      <geom mesh="Concrete_1_5_1" material="Concrete_1_tex_mat" class="visual_1" />
+      <geom name="Concrete_1_5_1" mesh="Concrete_1_5_1" class="collision_1" />
+    </body>
+    <body name="Concrete_1_body_5_2" pos="0 0 -7">
+      <geom mesh="Concrete_1_5_2" material="Concrete_1_tex_mat" class="visual_1" />
+      <geom name="Concrete_1_5_2" mesh="Concrete_1_5_2" class="collision_1" />
+    </body>
+    <body name="Concrete_1_body_5_3" pos="0 0 -7">
+      <geom mesh="Concrete_1_5_3" material="Concrete_1_tex_mat" class="visual_1" />
+      <geom name="Concrete_1_5_3" mesh="Concrete_1_5_3" class="collision_1" />
+    </body>
+    <body name="Concrete_1_body_6" pos="0 0 -7">
+      <geom mesh="Concrete_1_6" material="Concrete_1_tex_mat" class="visual_1" />
+      <geom name="Concrete_1_6" mesh="Concrete_1_6" class="collision_1" />
+    </body>
+    <body name="Concrete_1_body_7" pos="0 0 -7">
+      <geom mesh="Concrete_1_7" material="Concrete_1_tex_mat" class="visual_1" />
+      <geom name="Concrete_1_7" mesh="Concrete_1_7" class="collision_1" />
+    </body>
+    <body name="Concrete_1_body_8" pos="0 0 -7">
+      <geom mesh="Concrete_1_8" material="Concrete_1_tex_mat" class="visual_1" />
+      <geom name="Concrete_1_8" mesh="Concrete_1_8" class="collision_1" />
+    </body>
+    <body name="Concrete_2_body_1" pos="0 0 -7">
+      <geom mesh="Concrete_2_1" material="Concrete_2_tex_mat" class="visual_1" />
+      <geom name="Concrete_2_1" mesh="Concrete_2_1" class="collision_1" />
+    </body>
+    <body name="Concrete_2_body_2" pos="0 0 -7">
+      <geom mesh="Concrete_2_2" material="Concrete_2_tex_mat" class="visual_1" />
+      <geom name="Concrete_2_2" mesh="Concrete_2_2" class="collision_1" />
+    </body>
+    <body name="Concrete_2_body_3" pos="0 0 -7">
+      <geom mesh="Concrete_2_3" material="Concrete_2_tex_mat" class="visual_1" />
+      <geom name="Concrete_2_3" mesh="Concrete_2_3" class="collision_1" />
+    </body>
+    <body name="Concrete_2_body_4" pos="0 0 -7">
+      <geom mesh="Concrete_2_4" material="Concrete_2_tex_mat" class="visual_1" />
+      <geom name="Concrete_2_4" mesh="Concrete_2_4" class="collision_1" />
+    </body>
+    <body name="Concrete_2_body_5" pos="0 0 -7">
+      <geom mesh="Concrete_2_5" material="Concrete_2_tex_mat" class="visual_1" />
+      <geom name="Concrete_2_5" mesh="Concrete_2_5" class="collision_1" />
+    </body>
+    <body name="Concrete_2_body_6" pos="0 0 -7">
+      <geom mesh="Concrete_2_6" material="Concrete_2_tex_mat" class="visual_1" />
+      <geom name="Concrete_2_6" mesh="Concrete_2_6" class="collision_1" />
+    </body>
+    <body name="Concrete_2_body_7" pos="0 0 -7">
+      <geom mesh="Concrete_2_7" material="Concrete_2_tex_mat" class="visual_1" />
+      <geom name="Concrete_2_7" mesh="Concrete_2_7" class="collision_1" />
+    </body>
+    <body name="Concrete_2_body_8" pos="0 0 -7">
+      <geom mesh="Concrete_2_8" material="Concrete_2_tex_mat" class="visual_1" />
+      <geom name="Concrete_2_8" mesh="Concrete_2_8" class="collision_1" />
+    </body>
+    <body name="Office_1A_body_1" pos="0 0 -7">
+      <geom mesh="Office_1A_1" material="Office_1A_tex_mat" class="visual_1" />
+      <geom name="Office_1A_1" mesh="Office_1A_1" class="collision_1" />
+    </body>
+    <body name="Office_1A_body_2" pos="0 0 -7">
+      <geom mesh="Office_1A_2" material="Office_1A_tex_mat" class="visual_1" />
+      <geom name="Office_1A_2" mesh="Office_1A_2" class="collision_1" />
+    </body>
+    <body name="Office_1A_body_3" pos="0 0 -7">
+      <geom mesh="Office_1A_3" material="Office_1A_tex_mat" class="visual_1" />
+      <geom name="Office_1A_3" mesh="Office_1A_3" class="collision_1" />
+    </body>
+    <body name="Office_1A_body_4" pos="0 0 -7">
+      <geom mesh="Office_1A_4" material="Office_1A_tex_mat" class="visual_1" />
+      <geom name="Office_1A_4" mesh="Office_1A_4" class="collision_1" />
+    </body>
+    <body name="Office_1A_body_5" pos="0 0 -7">
+      <geom mesh="Office_1A_5" material="Office_1A_tex_mat" class="visual_1" />
+      <geom name="Office_1A_5" mesh="Office_1A_5" class="collision_1" />
+    </body>
+    <body name="Office_1A_body_6" pos="0 0 -7">
+      <geom mesh="Office_1A_6" material="Office_1A_tex_mat" class="visual_1" />
+      <geom name="Office_1A_6" mesh="Office_1A_6" class="collision_1" />
+    </body>
+    <body name="Office_1A_body_7" pos="0 0 -7">
+      <geom mesh="Office_1A_7" material="Office_1A_tex_mat" class="visual_1" />
+      <geom name="Office_1A_7" mesh="Office_1A_7" class="collision_1" />
+    </body>
+    <body name="Office_1A_body_8" pos="0 0 -7">
+      <geom mesh="Office_1A_8" material="Office_1A_tex_mat" class="visual_1" />
+      <geom name="Office_1A_8" mesh="Office_1A_8" class="collision_1" />
+    </body>
+    <body name="Office_1B_body_1" pos="0 0 -7">
+      <geom mesh="Office_1B_1" material="Office_1B_tex_mat" class="visual_1" />
+      <geom name="Office_1B_1" mesh="Office_1B_1" class="collision_1" />
+    </body>
+    <body name="Office_1B_body_2" pos="0 0 -7">
+      <geom mesh="Office_1B_2" material="Office_1B_tex_mat" class="visual_1" />
+      <geom name="Office_1B_2" mesh="Office_1B_2" class="collision_1" />
+    </body>
+    <body name="Office_1B_body_3" pos="0 0 -7">
+      <geom mesh="Office_1B_3" material="Office_1B_tex_mat" class="visual_1" />
+      <geom name="Office_1B_3" mesh="Office_1B_3" class="collision_1" />
+    </body>
+    <body name="Office_1B_body_4" pos="0 0 -7">
+      <geom mesh="Office_1B_4" material="Office_1B_tex_mat" class="visual_1" />
+      <geom name="Office_1B_4" mesh="Office_1B_4" class="collision_1" />
+    </body>
+    <body name="Office_1B_body_5" pos="0 0 -7">
+      <geom mesh="Office_1B_5" material="Office_1B_tex_mat" class="visual_1" />
+      <geom name="Office_1B_5" mesh="Office_1B_5" class="collision_1" />
+    </body>
+    <body name="Office_1B_body_6" pos="0 0 -7">
+      <geom mesh="Office_1B_6" material="Office_1B_tex_mat" class="visual_1" />
+      <geom name="Office_1B_6" mesh="Office_1B_6" class="collision_1" />
+    </body>
+    <body name="Office_1B_body_7" pos="0 0 -7">
+      <geom mesh="Office_1B_7" material="Office_1B_tex_mat" class="visual_1" />
+      <geom name="Office_1B_7" mesh="Office_1B_7" class="collision_1" />
+    </body>
+    <body name="Office_1B_body_8" pos="0 0 -7">
+      <geom mesh="Office_1B_8" material="Office_1B_tex_mat" class="visual_1" />
+      <geom name="Office_1B_8" mesh="Office_1B_8" class="collision_1" />
+    </body>
+    <body name="Office_1B_body_9" pos="0 0 -7">
+      <geom mesh="Office_1B_9" material="Office_1B_tex_mat" class="visual_1" />
+      <geom name="Office_1B_9" mesh="Office_1B_9" class="collision_1" />
+    </body>
+    <body name="Office_1B_body_10" pos="0 0 -7">
+      <geom mesh="Office_1B_10" material="Office_1B_tex_mat" class="visual_1" />
+      <geom name="Office_1B_10" mesh="Office_1B_10" class="collision_1" />
+    </body>
+    <body name="Office_1B_body_11" pos="0 0 -7">
+      <geom mesh="Office_1B_11" material="Office_1B_tex_mat" class="visual_1" />
+      <geom name="Office_1B_11" mesh="Office_1B_11" class="collision_1" />
+    </body>
+    <body name="Office_1B_body_12" pos="0 0 -7">
+      <geom mesh="Office_1B_12" material="Office_1B_tex_mat" class="visual_1" />
+      <geom name="Office_1B_12" mesh="Office_1B_12" class="collision_1" />
+    </body>
+    <body name="Office_1B_body_13" pos="0 0 -7">
+      <geom mesh="Office_1B_13" material="Office_1B_tex_mat" class="visual_1" />
+      <geom name="Office_1B_13" mesh="Office_1B_13" class="collision_1" />
+    </body>
+    <body name="Office_1C_body_1" pos="0 0 -7">
+      <geom mesh="Office_1C_1" material="Office_1C_tex_mat" class="visual_1" />
+      <geom name="Office_1C_1" mesh="Office_1C_1" class="collision_1" />
+    </body>
+    <body name="Office_1C_body_2" pos="0 0 -7">
+      <geom mesh="Office_1C_2" material="Office_1C_tex_mat" class="visual_1" />
+      <geom name="Office_1C_2" mesh="Office_1C_2" class="collision_1" />
+    </body>
+    <body name="Office_1C_body_3" pos="0 0 -7">
+      <geom mesh="Office_1C_3" material="Office_1C_tex_mat" class="visual_1" />
+      <geom name="Office_1C_3" mesh="Office_1C_3" class="collision_1" />
+    </body>
+    <body name="Office_1C_body_4" pos="0 0 -7">
+      <geom mesh="Office_1C_4" material="Office_1C_tex_mat" class="visual_1" />
+      <geom name="Office_1C_4" mesh="Office_1C_4" class="collision_1" />
+    </body>
+    <body name="Office_1C_body_5" pos="0 0 -7">
+      <geom mesh="Office_1C_5" material="Office_1C_tex_mat" class="visual_1" />
+      <geom name="Office_1C_5" mesh="Office_1C_5" class="collision_1" />
+    </body>
+    <body name="Office_1C_body_6" pos="0 0 -7">
+      <geom mesh="Office_1C_6" material="Office_1C_tex_mat" class="visual_1" />
+      <geom name="Office_1C_6" mesh="Office_1C_6" class="collision_1" />
+    </body>
+    <body name="Office_1C_body_7" pos="0 0 -7">
+      <geom mesh="Office_1C_7" material="Office_1C_tex_mat" class="visual_1" />
+      <geom name="Office_1C_7" mesh="Office_1C_7" class="collision_1" />
+    </body>
+    <body name="Office_1C_body_8" pos="0 0 -7">
+      <geom mesh="Office_1C_8" material="Office_1C_tex_mat" class="visual_1" />
+      <geom name="Office_1C_8" mesh="Office_1C_8" class="collision_1" />
+    </body>
+    <body name="Office_1C_body_9" pos="0 0 -7">
+      <geom mesh="Office_1C_9" material="Office_1C_tex_mat" class="visual_1" />
+      <geom name="Office_1C_9" mesh="Office_1C_9" class="collision_1" />
+    </body>
+    <body name="Office_1C_body_10" pos="0 0 -7">
+      <geom mesh="Office_1C_10" material="Office_1C_tex_mat" class="visual_1" />
+      <geom name="Office_1C_10" mesh="Office_1C_10" class="collision_1" />
+    </body>
+    <body name="Office_1C_body_11" pos="0 0 -7">
+      <geom mesh="Office_1C_11" material="Office_1C_tex_mat" class="visual_1" />
+      <geom name="Office_1C_11" mesh="Office_1C_11" class="collision_1" />
+    </body>
+    <body name="Office_1C_body_12" pos="0 0 -7">
+      <geom mesh="Office_1C_12" material="Office_1C_tex_mat" class="visual_1" />
+      <geom name="Office_1C_12" mesh="Office_1C_12" class="collision_1" />
+    </body>
+    <body name="Office_1C_body_13" pos="0 0 -7">
+      <geom mesh="Office_1C_13" material="Office_1C_tex_mat" class="visual_1" />
+      <geom name="Office_1C_13" mesh="Office_1C_13" class="collision_1" />
+    </body>
+    <body name="Office_1D_body_1" pos="0 0 -7">
+      <geom mesh="Office_1D_1" material="Office_1D_mat" class="visual_1" />
+      <geom name="Office_1D_1" mesh="Office_1D_1" class="collision_1" />
+    </body>
+    <body name="Office_1D_body_2" pos="0 0 -7">
+      <geom mesh="Office_1D_2" material="Office_1D_mat" class="visual_1" />
+      <geom name="Office_1D_2" mesh="Office_1D_2" class="collision_1" />
+    </body>
+    <body name="Office_1D_body_3" pos="0 0 -7">
+      <geom mesh="Office_1D_3" material="Office_1D_mat" class="visual_1" />
+      <geom name="Office_1D_3" mesh="Office_1D_3" class="collision_1" />
+    </body>
+    <body name="Office_1D_body_4" pos="0 0 -7">
+      <geom mesh="Office_1D_4" material="Office_1D_mat" class="visual_1" />
+      <geom name="Office_1D_4" mesh="Office_1D_4" class="collision_1" />
+    </body>
+    <body name="Office_2A_body_1" pos="0 0 -7">
+      <geom mesh="Office_2A_1" material="Office_2A_tex_mat" class="visual_1" />
+      <geom name="Office_2A_1" mesh="Office_2A_1" class="collision_1" />
+    </body>
+    <body name="Office_2A_body_2" pos="0 0 -7">
+      <geom mesh="Office_2A_2" material="Office_2A_tex_mat" class="visual_1" />
+      <geom name="Office_2A_2" mesh="Office_2A_2" class="collision_1" />
+    </body>
+    <body name="Office_2A_body_3" pos="0 0 -7">
+      <geom mesh="Office_2A_3" material="Office_2A_tex_mat" class="visual_1" />
+      <geom name="Office_2A_3" mesh="Office_2A_3" class="collision_1" />
+    </body>
+    <body name="Office_2A_body_4" pos="0 0 -7">
+      <geom mesh="Office_2A_4" material="Office_2A_tex_mat" class="visual_1" />
+      <geom name="Office_2A_4" mesh="Office_2A_4" class="collision_1" />
+    </body>
+    <body name="Office_2B_body_1" pos="0 0 -7">
+      <geom mesh="Office_2B_1" material="Office_2B_tex_mat" class="visual_1" />
+      <geom name="Office_2B_1" mesh="Office_2B_1" class="collision_1" />
+    </body>
+    <body name="Office_2B_body_2" pos="0 0 -7">
+      <geom mesh="Office_2B_2" material="Office_2B_tex_mat" class="visual_1" />
+      <geom name="Office_2B_2" mesh="Office_2B_2" class="collision_1" />
+    </body>
+    <body name="Office_2B_body_3" pos="0 0 -7">
+      <geom mesh="Office_2B_3" material="Office_2B_tex_mat" class="visual_1" />
+      <geom name="Office_2B_3" mesh="Office_2B_3" class="collision_1" />
+    </body>
+    <body name="Office_2B_body_4" pos="0 0 -7">
+      <geom mesh="Office_2B_4" material="Office_2B_tex_mat" class="visual_1" />
+      <geom name="Office_2B_4" mesh="Office_2B_4" class="collision_1" />
+    </body>
+    <body name="Office_2B_body_5" pos="0 0 -7">
+      <geom mesh="Office_2B_5" material="Office_2B_tex_mat" class="visual_1" />
+      <geom name="Office_2B_5" mesh="Office_2B_5" class="collision_1" />
+    </body>
+    <body name="Office_2B_body_6" pos="0 0 -7">
+      <geom mesh="Office_2B_6" material="Office_2B_tex_mat" class="visual_1" />
+      <geom name="Office_2B_6" mesh="Office_2B_6" class="collision_1" />
+    </body>
+    <body name="Office_2B_body_7" pos="0 0 -7">
+      <geom mesh="Office_2B_7" material="Office_2B_tex_mat" class="visual_1" />
+      <geom name="Office_2B_7" mesh="Office_2B_7" class="collision_1" />
+    </body>
+    <body name="Office_2B_body_8" pos="0 0 -7">
+      <geom mesh="Office_2B_8" material="Office_2B_tex_mat" class="visual_1" />
+      <geom name="Office_2B_8" mesh="Office_2B_8" class="collision_1" />
+    </body>
+    <body name="Office_2B_body_9" pos="0 0 -7">
+      <geom mesh="Office_2B_9" material="Office_2B_tex_mat" class="visual_1" />
+      <geom name="Office_2B_9" mesh="Office_2B_9" class="collision_1" />
+    </body>
+    <body name="Office_2B_body_10" pos="0 0 -7">
+      <geom mesh="Office_2B_10" material="Office_2B_tex_mat" class="visual_1" />
+      <geom name="Office_2B_10" mesh="Office_2B_10" class="collision_1" />
+    </body>
+    <body name="Office_2B_body_11" pos="0 0 -7">
+      <geom mesh="Office_2B_11" material="Office_2B_tex_mat" class="visual_1" />
+      <geom name="Office_2B_11" mesh="Office_2B_11" class="collision_1" />
+    </body>
+    <body name="Office_2B_body_12" pos="0 0 -7">
+      <geom mesh="Office_2B_12" material="Office_2B_tex_mat" class="visual_1" />
+      <geom name="Office_2B_12" mesh="Office_2B_12" class="collision_1" />
+    </body>
+    <body name="Office_2B_body_13" pos="0 0 -7">
+      <geom mesh="Office_2B_13" material="Office_2B_tex_mat" class="visual_1" />
+      <geom name="Office_2B_13" mesh="Office_2B_13" class="collision_1" />
+    </body>
+    <body name="Office_2B_body_14" pos="0 0 -7">
+      <geom mesh="Office_2B_14" material="Office_2B_tex_mat" class="visual_1" />
+      <geom name="Office_2B_14" mesh="Office_2B_14" class="collision_1" />
+    </body>
+    <body name="Office_2C_body_1" pos="0 0 -7">
+      <geom mesh="Office_2C_1" material="Office_2C_tex_mat" class="visual_1" />
+      <geom name="Office_2C_1" mesh="Office_2C_1" class="collision_1" />
+    </body>
+    <body name="Office_2C_body_2" pos="0 0 -7">
+      <geom mesh="Office_2C_2" material="Office_2C_tex_mat" class="visual_1" />
+      <geom name="Office_2C_2" mesh="Office_2C_2" class="collision_1" />
+    </body>
+    <body name="Office_2C_body_3" pos="0 0 -7">
+      <geom mesh="Office_2C_3" material="Office_2C_tex_mat" class="visual_1" />
+      <geom name="Office_2C_3" mesh="Office_2C_3" class="collision_1" />
+    </body>
+    <body name="Office_2C_body_4" pos="0 0 -7">
+      <geom mesh="Office_2C_4" material="Office_2C_tex_mat" class="visual_1" />
+      <geom name="Office_2C_4" mesh="Office_2C_4" class="collision_1" />
+    </body>
+    <body name="Office_2C_body_5" pos="0 0 -7">
+      <geom mesh="Office_2C_5" material="Office_2C_tex_mat" class="visual_1" />
+      <geom name="Office_2C_5" mesh="Office_2C_5" class="collision_1" />
+    </body>
+    <body name="Office_2C_body_6" pos="0 0 -7">
+      <geom mesh="Office_2C_6" material="Office_2C_tex_mat" class="visual_1" />
+      <geom name="Office_2C_6" mesh="Office_2C_6" class="collision_1" />
+    </body>
+    <body name="Office_2C_body_7" pos="0 0 -7">
+      <geom mesh="Office_2C_7" material="Office_2C_tex_mat" class="visual_1" />
+      <geom name="Office_2C_7" mesh="Office_2C_7" class="collision_1" />
+    </body>
+    <body name="Office_2C_body_8" pos="0 0 -7">
+      <geom mesh="Office_2C_8" material="Office_2C_tex_mat" class="visual_1" />
+      <geom name="Office_2C_8" mesh="Office_2C_8" class="collision_1" />
+    </body>
+    <body name="Office_3A_body_1" pos="0 0 -7">
+      <geom mesh="Office_3A_1" material="Office_3A_tex_mat" class="visual_1" />
+      <geom name="Office_3A_1" mesh="Office_3A_1" class="collision_1" />
+    </body>
+    <body name="Office_3A_body_2" pos="0 0 -7">
+      <geom mesh="Office_3A_2" material="Office_3A_tex_mat" class="visual_1" />
+      <geom name="Office_3A_2" mesh="Office_3A_2" class="collision_1" />
+    </body>
+    <body name="Office_3A_body_3" pos="0 0 -7">
+      <geom mesh="Office_3A_3" material="Office_3A_tex_mat" class="visual_1" />
+      <geom name="Office_3A_3" mesh="Office_3A_3" class="collision_1" />
+    </body>
+    <body name="Office_3A_body_4" pos="0 0 -7">
+      <geom mesh="Office_3A_4" material="Office_3A_tex_mat" class="visual_1" />
+      <geom name="Office_3A_4" mesh="Office_3A_4" class="collision_1" />
+    </body>
+    <body name="Office_3A_body_5" pos="0 0 -7">
+      <geom mesh="Office_3A_5" material="Office_3A_tex_mat" class="visual_1" />
+      <geom name="Office_3A_5" mesh="Office_3A_5" class="collision_1" />
+    </body>
+    <body name="Office_3A_body_6" pos="0 0 -7">
+      <geom mesh="Office_3A_6" material="Office_3A_tex_mat" class="visual_1" />
+      <geom name="Office_3A_6" mesh="Office_3A_6" class="collision_1" />
+    </body>
+    <body name="Office_3A_body_7" pos="0 0 -7">
+      <geom mesh="Office_3A_7" material="Office_3A_tex_mat" class="visual_1" />
+      <geom name="Office_3A_7" mesh="Office_3A_7" class="collision_1" />
+    </body>
+    <body name="Office_3A_body_8" pos="0 0 -7">
+      <geom mesh="Office_3A_8" material="Office_3A_tex_mat" class="visual_1" />
+      <geom name="Office_3A_8" mesh="Office_3A_8" class="collision_1" />
+    </body>
+    <body name="Office_3A_body_9" pos="0 0 -7">
+      <geom mesh="Office_3A_9" material="Office_3A_tex_mat" class="visual_1" />
+      <geom name="Office_3A_9" mesh="Office_3A_9" class="collision_1" />
+    </body>
+    <body name="Office_3A_body_10" pos="0 0 -7">
+      <geom mesh="Office_3A_10" material="Office_3A_tex_mat" class="visual_1" />
+      <geom name="Office_3A_10" mesh="Office_3A_10" class="collision_1" />
+    </body>
+    <body name="Office_3A_body_11" pos="0 0 -7">
+      <geom mesh="Office_3A_11" material="Office_3A_tex_mat" class="visual_1" />
+      <geom name="Office_3A_11" mesh="Office_3A_11" class="collision_1" />
+    </body>
+    <body name="Office_3A_body_12" pos="0 0 -7">
+      <geom mesh="Office_3A_12" material="Office_3A_tex_mat" class="visual_1" />
+      <geom name="Office_3A_12" mesh="Office_3A_12" class="collision_1" />
+    </body>
+    <body name="Office_3A_body_13" pos="0 0 -7">
+      <geom mesh="Office_3A_13" material="Office_3A_tex_mat" class="visual_1" />
+      <geom name="Office_3A_13" mesh="Office_3A_13" class="collision_1" />
+    </body>
+    <body name="Office_3A_body_14" pos="0 0 -7">
+      <geom mesh="Office_3A_14" material="Office_3A_tex_mat" class="visual_1" />
+      <geom name="Office_3A_14" mesh="Office_3A_14" class="collision_1" />
+    </body>
+    <body name="Office_3A_body_15" pos="0 0 -7">
+      <geom mesh="Office_3A_15" material="Office_3A_tex_mat" class="visual_1" />
+      <geom name="Office_3A_15" mesh="Office_3A_15" class="collision_1" />
+    </body>
+    <body name="Office_3A_body_16" pos="0 0 -7">
+      <geom mesh="Office_3A_16" material="Office_3A_tex_mat" class="visual_1" />
+      <geom name="Office_3A_16" mesh="Office_3A_16" class="collision_1" />
+    </body>
+    <body name="Office_3A_body_17" pos="0 0 -7">
+      <geom mesh="Office_3A_17" material="Office_3A_tex_mat" class="visual_1" />
+      <geom name="Office_3A_17" mesh="Office_3A_17" class="collision_1" />
+    </body>
+    <body name="Office_3A_body_18" pos="0 0 -7">
+      <geom mesh="Office_3A_18" material="Office_3A_tex_mat" class="visual_1" />
+      <geom name="Office_3A_18" mesh="Office_3A_18" class="collision_1" />
+    </body>
+    <body name="Office_3A_body_19" pos="0 0 -7">
+      <geom mesh="Office_3A_19" material="Office_3A_tex_mat" class="visual_1" />
+      <geom name="Office_3A_19" mesh="Office_3A_19" class="collision_1" />
+    </body>
+    <body name="Office_3A_body_20" pos="0 0 -7">
+      <geom mesh="Office_3A_20" material="Office_3A_tex_mat" class="visual_1" />
+      <geom name="Office_3A_20" mesh="Office_3A_20" class="collision_1" />
+    </body>
+    <body name="Office_3A_body_21" pos="0 0 -7">
+      <geom mesh="Office_3A_21" material="Office_3A_tex_mat" class="visual_1" />
+      <geom name="Office_3A_21" mesh="Office_3A_21" class="collision_1" />
+    </body>
+    <body name="Office_3A_body_22" pos="0 0 -7">
+      <geom mesh="Office_3A_22" material="Office_3A_tex_mat" class="visual_1" />
+      <geom name="Office_3A_22" mesh="Office_3A_22" class="collision_1" />
+    </body>
+    <body name="Office_3A_body_23" pos="0 0 -7">
+      <geom mesh="Office_3A_23" material="Office_3A_tex_mat" class="visual_1" />
+      <geom name="Office_3A_23" mesh="Office_3A_23" class="collision_1" />
+    </body>
+    <body name="Office_3A_body_24" pos="0 0 -7">
+      <geom mesh="Office_3A_24" material="Office_3A_tex_mat" class="visual_1" />
+      <geom name="Office_3A_24" mesh="Office_3A_24" class="collision_1" />
+    </body>
+    <body name="Office_3A_body_25" pos="0 0 -7">
+      <geom mesh="Office_3A_25" material="Office_3A_tex_mat" class="visual_1" />
+      <geom name="Office_3A_25" mesh="Office_3A_25" class="collision_1" />
+    </body>
+    <body name="Office_3A_body_26" pos="0 0 -7">
+      <geom mesh="Office_3A_26" material="Office_3A_tex_mat" class="visual_1" />
+      <geom name="Office_3A_26" mesh="Office_3A_26" class="collision_1" />
+    </body>
+    <body name="Office_3A_body_27" pos="0 0 -7">
+      <geom mesh="Office_3A_27" material="Office_3A_tex_mat" class="visual_1" />
+      <geom name="Office_3A_27" mesh="Office_3A_27" class="collision_1" />
+    </body>
+    <body name="Office_3A_body_28" pos="0 0 -7">
+      <geom mesh="Office_3A_28" material="Office_3A_tex_mat" class="visual_1" />
+      <geom name="Office_3A_28" mesh="Office_3A_28" class="collision_1" />
+    </body>
+    <body name="Office_3A_body_29" pos="0 0 -7">
+      <geom mesh="Office_3A_29" material="Office_3A_tex_mat" class="visual_1" />
+      <geom name="Office_3A_29" mesh="Office_3A_29" class="collision_1" />
+    </body>
+    <body name="Office_3A_body_30" pos="0 0 -7">
+      <geom mesh="Office_3A_30" material="Office_3A_tex_mat" class="visual_1" />
+      <geom name="Office_3A_30" mesh="Office_3A_30" class="collision_1" />
+    </body>
+    <body name="Office_3A_body_31" pos="0 0 -7">
+      <geom mesh="Office_3A_31" material="Office_3A_tex_mat" class="visual_1" />
+      <geom name="Office_3A_31" mesh="Office_3A_31" class="collision_1" />
+    </body>
+    <body name="Office_3A_body_32" pos="0 0 -7">
+      <geom mesh="Office_3A_32" material="Office_3A_tex_mat" class="visual_1" />
+      <geom name="Office_3A_32" mesh="Office_3A_32" class="collision_1" />
+    </body>
+    <body name="Office_3A_body_33" pos="0 0 -7">
+      <geom mesh="Office_3A_33" material="Office_3A_tex_mat" class="visual_1" />
+      <geom name="Office_3A_33" mesh="Office_3A_33" class="collision_1" />
+    </body>
+    <body name="Office_3A_body_34" pos="0 0 -7">
+      <geom mesh="Office_3A_34" material="Office_3A_tex_mat" class="visual_1" />
+      <geom name="Office_3A_34" mesh="Office_3A_34" class="collision_1" />
+    </body>
+    <body name="Office_3A_body_35" pos="0 0 -7">
+      <geom mesh="Office_3A_35" material="Office_3A_tex_mat" class="visual_1" />
+      <geom name="Office_3A_35" mesh="Office_3A_35" class="collision_1" />
+    </body>
+    <body name="Office_3A_body_36" pos="0 0 -7">
+      <geom mesh="Office_3A_36" material="Office_3A_tex_mat" class="visual_1" />
+      <geom name="Office_3A_36" mesh="Office_3A_36" class="collision_1" />
+    </body>
+    <body name="Office_3A_body_37" pos="0 0 -7">
+      <geom mesh="Office_3A_37" material="Office_3A_tex_mat" class="visual_1" />
+      <geom name="Office_3A_37" mesh="Office_3A_37" class="collision_1" />
+    </body>
+    <body name="Office_3A_body_38" pos="0 0 -7">
+      <geom mesh="Office_3A_38" material="Office_3A_tex_mat" class="visual_1" />
+      <geom name="Office_3A_38" mesh="Office_3A_38" class="collision_1" />
+    </body>
+    <body name="Office_3A_body_39" pos="0 0 -7">
+      <geom mesh="Office_3A_39" material="Office_3A_tex_mat" class="visual_1" />
+      <geom name="Office_3A_39" mesh="Office_3A_39" class="collision_1" />
+    </body>
+    <body name="Office_3A_body_40" pos="0 0 -7">
+      <geom mesh="Office_3A_40" material="Office_3A_tex_mat" class="visual_1" />
+      <geom name="Office_3A_40" mesh="Office_3A_40" class="collision_1" />
+    </body>
+    <body name="Office_3A_body_41" pos="0 0 -7">
+      <geom mesh="Office_3A_41" material="Office_3A_tex_mat" class="visual_1" />
+      <geom name="Office_3A_41" mesh="Office_3A_41" class="collision_1" />
+    </body>
+    <body name="Office_3A_body_42" pos="0 0 -7">
+      <geom mesh="Office_3A_42" material="Office_3A_tex_mat" class="visual_1" />
+      <geom name="Office_3A_42" mesh="Office_3A_42" class="collision_1" />
+    </body>
+    <body name="Office_3B_body_1" pos="0 0 -7">
+      <geom mesh="Office_3B_1" material="Office_3B_tex_mat" class="visual_1" />
+      <geom name="Office_3B_1" mesh="Office_3B_1" class="collision_1" />
+    </body>
+    <body name="Office_3B_body_2" pos="0 0 -7">
+      <geom mesh="Office_3B_2" material="Office_3B_tex_mat" class="visual_1" />
+      <geom name="Office_3B_2" mesh="Office_3B_2" class="collision_1" />
+    </body>
+    <body name="Office_3B_body_3" pos="0 0 -7">
+      <geom mesh="Office_3B_3" material="Office_3B_tex_mat" class="visual_1" />
+      <geom name="Office_3B_3" mesh="Office_3B_3" class="collision_1" />
+    </body>
+    <body name="Office_3B_body_4" pos="0 0 -7">
+      <geom mesh="Office_3B_4" material="Office_3B_tex_mat" class="visual_1" />
+      <geom name="Office_3B_4" mesh="Office_3B_4" class="collision_1" />
+    </body>
+    <body name="Office_3B_body_5" pos="0 0 -7">
+      <geom mesh="Office_3B_5" material="Office_3B_tex_mat" class="visual_1" />
+      <geom name="Office_3B_5" mesh="Office_3B_5" class="collision_1" />
+    </body>
+    <body name="Office_3B_body_6" pos="0 0 -7">
+      <geom mesh="Office_3B_6" material="Office_3B_tex_mat" class="visual_1" />
+      <geom name="Office_3B_6" mesh="Office_3B_6" class="collision_1" />
+    </body>
+    <body name="Office_3B_body_7" pos="0 0 -7">
+      <geom mesh="Office_3B_7" material="Office_3B_tex_mat" class="visual_1" />
+      <geom name="Office_3B_7" mesh="Office_3B_7" class="collision_1" />
+    </body>
+    <body name="Office_3B_body_8" pos="0 0 -7">
+      <geom mesh="Office_3B_8" material="Office_3B_tex_mat" class="visual_1" />
+      <geom name="Office_3B_8" mesh="Office_3B_8" class="collision_1" />
+    </body>
+    <body name="Office_3B_body_9" pos="0 0 -7">
+      <geom mesh="Office_3B_9" material="Office_3B_tex_mat" class="visual_1" />
+      <geom name="Office_3B_9" mesh="Office_3B_9" class="collision_1" />
+    </body>
+    <body name="Office_3B_body_10" pos="0 0 -7">
+      <geom mesh="Office_3B_10" material="Office_3B_tex_mat" class="visual_1" />
+      <geom name="Office_3B_10" mesh="Office_3B_10" class="collision_1" />
+    </body>
+    <body name="Office_3B_body_11" pos="0 0 -7">
+      <geom mesh="Office_3B_11" material="Office_3B_tex_mat" class="visual_1" />
+      <geom name="Office_3B_11" mesh="Office_3B_11" class="collision_1" />
+    </body>
+    <body name="Office_3B_body_12" pos="0 0 -7">
+      <geom mesh="Office_3B_12" material="Office_3B_tex_mat" class="visual_1" />
+      <geom name="Office_3B_12" mesh="Office_3B_12" class="collision_1" />
+    </body>
+    <body name="Office_3B_body_13" pos="0 0 -7">
+      <geom mesh="Office_3B_13" material="Office_3B_tex_mat" class="visual_1" />
+      <geom name="Office_3B_13" mesh="Office_3B_13" class="collision_1" />
+    </body>
+    <body name="Office_3B_body_14" pos="0 0 -7">
+      <geom mesh="Office_3B_14" material="Office_3B_tex_mat" class="visual_1" />
+      <geom name="Office_3B_14" mesh="Office_3B_14" class="collision_1" />
+    </body>
+    <body name="Office_3B_body_15" pos="0 0 -7">
+      <geom mesh="Office_3B_15" material="Office_3B_tex_mat" class="visual_1" />
+      <geom name="Office_3B_15" mesh="Office_3B_15" class="collision_1" />
+    </body>
+    <body name="Office_3B_body_16" pos="0 0 -7">
+      <geom mesh="Office_3B_16" material="Office_3B_tex_mat" class="visual_1" />
+      <geom name="Office_3B_16" mesh="Office_3B_16" class="collision_1" />
+    </body>
+    <body name="Office_3B_body_17" pos="0 0 -7">
+      <geom mesh="Office_3B_17" material="Office_3B_tex_mat" class="visual_1" />
+      <geom name="Office_3B_17" mesh="Office_3B_17" class="collision_1" />
+    </body>
+    <body name="Parking_Interior_body_1" pos="0 0 -7">
+      <geom mesh="Parking_Interior_1" material="Parking_Interior_tex_mat" class="visual_1" />
+      <geom name="Parking_Interior_1" mesh="Parking_Interior_1" class="collision_1" />
+    </body>
+    <body name="Parking_Interior_body_2" pos="0 0 -7">
+      <geom mesh="Parking_Interior_2" material="Parking_Interior_tex_mat" class="visual_1" />
+      <geom name="Parking_Interior_2" mesh="Parking_Interior_2" class="collision_1" />
+    </body>
+    <body name="Parking_Interior_body_3" pos="0 0 -7">
+      <geom mesh="Parking_Interior_3" material="Parking_Interior_tex_mat" class="visual_1" />
+      <geom name="Parking_Interior_3" mesh="Parking_Interior_3" class="collision_1" />
+    </body>
+    <body name="Parking_Interior_body_4" pos="0 0 -7">
+      <geom mesh="Parking_Interior_4" material="Parking_Interior_tex_mat" class="visual_1" />
+      <geom name="Parking_Interior_4" mesh="Parking_Interior_4" class="collision_1" />
+    </body>
+    <body name="Parking_Interior_body_5" pos="0 0 -7">
+      <geom mesh="Parking_Interior_5" material="Parking_Interior_tex_mat" class="visual_1" />
+      <geom name="Parking_Interior_5" mesh="Parking_Interior_5" class="collision_1" />
+    </body>
+    <body name="Parking_Interior_body_6" pos="0 0 -7">
+      <geom mesh="Parking_Interior_6" material="Parking_Interior_tex_mat" class="visual_1" />
+      <geom name="Parking_Interior_6" mesh="Parking_Interior_6" class="collision_1" />
+    </body>
+    <body name="Parking_Interior_body_7" pos="0 0 -7">
+      <geom mesh="Parking_Interior_7" material="Parking_Interior_tex_mat" class="visual_1" />
+      <geom name="Parking_Interior_7" mesh="Parking_Interior_7" class="collision_1" />
+    </body>
+    <body name="Parking_Interior_body_8" pos="0 0 -7">
+      <geom mesh="Parking_Interior_8" material="Parking_Interior_tex_mat" class="visual_1" />
+      <geom name="Parking_Interior_8" mesh="Parking_Interior_8" class="collision_1" />
+    </body>
+    <body name="Parking_Interior_body_9" pos="0 0 -7">
+      <geom mesh="Parking_Interior_9" material="Parking_Interior_tex_mat" class="visual_1" />
+      <geom name="Parking_Interior_9" mesh="Parking_Interior_9" class="collision_1" />
+    </body>
+    <body name="Parking_Interior_body_10" pos="0 0 -7">
+      <geom mesh="Parking_Interior_10" material="Parking_Interior_tex_mat" class="visual_1" />
+      <geom name="Parking_Interior_10" mesh="Parking_Interior_10" class="collision_1" />
+    </body>
+    <body name="Parking_Interior_body_11" pos="0 0 -7">
+      <geom mesh="Parking_Interior_11" material="Parking_Interior_tex_mat" class="visual_1" />
+      <geom name="Parking_Interior_11" mesh="Parking_Interior_11" class="collision_1" />
+    </body>
+    <body name="Parking_Interior_body_12" pos="0 0 -7">
+      <geom mesh="Parking_Interior_12" material="Parking_Interior_tex_mat" class="visual_1" />
+      <geom name="Parking_Interior_12" mesh="Parking_Interior_12" class="collision_1" />
+    </body>
+    <body name="Parking_Interior_body_13" pos="0 0 -7">
+      <geom mesh="Parking_Interior_13" material="Parking_Interior_tex_mat" class="visual_1" />
+      <geom name="Parking_Interior_13" mesh="Parking_Interior_13" class="collision_1" />
+    </body>
+    <body name="Parking_Interior_body_14" pos="0 0 -7">
+      <geom mesh="Parking_Interior_14" material="Parking_Interior_tex_mat" class="visual_1" />
+      <geom name="Parking_Interior_14" mesh="Parking_Interior_14" class="collision_1" />
+    </body>
+    <body name="Parking_Interior_body_15" pos="0 0 -7">
+      <geom mesh="Parking_Interior_15" material="Parking_Interior_tex_mat" class="visual_1" />
+      <geom name="Parking_Interior_15" mesh="Parking_Interior_15" class="collision_1" />
+    </body>
+    <body name="Parking_Interior_body_16" pos="0 0 -7">
+      <geom mesh="Parking_Interior_16" material="Parking_Interior_tex_mat" class="visual_1" />
+      <geom name="Parking_Interior_16" mesh="Parking_Interior_16" class="collision_1" />
+    </body>
+    <body name="Parking_Interior_body_17" pos="0 0 -7">
+      <geom mesh="Parking_Interior_17" material="Parking_Interior_tex_mat" class="visual_1" />
+      <geom name="Parking_Interior_17" mesh="Parking_Interior_17" class="collision_1" />
+    </body>
+    <body name="Parking_Interior_body_18" pos="0 0 -7">
+      <geom mesh="Parking_Interior_18" material="Parking_Interior_tex_mat" class="visual_1" />
+      <geom name="Parking_Interior_18" mesh="Parking_Interior_18" class="collision_1" />
+    </body>
+    <body name="Parking_Interior_body_19" pos="0 0 -7">
+      <geom mesh="Parking_Interior_19" material="Parking_Interior_tex_mat" class="visual_1" />
+      <geom name="Parking_Interior_19" mesh="Parking_Interior_19" class="collision_1" />
+    </body>
+    <body name="Parking_Interior_body_20" pos="0 0 -7">
+      <geom mesh="Parking_Interior_20" material="Parking_Interior_tex_mat" class="visual_1" />
+      <geom name="Parking_Interior_20" mesh="Parking_Interior_20" class="collision_1" />
+    </body>
+    <body name="Parking_Interior_body_21" pos="0 0 -7">
+      <geom mesh="Parking_Interior_21" material="Parking_Interior_tex_mat" class="visual_1" />
+      <geom name="Parking_Interior_21" mesh="Parking_Interior_21" class="collision_1" />
+    </body>
+    <body name="Parking_Interior_body_22" pos="0 0 -7">
+      <geom mesh="Parking_Interior_22" material="Parking_Interior_tex_mat" class="visual_1" />
+      <geom name="Parking_Interior_22" mesh="Parking_Interior_22" class="collision_1" />
+    </body>
+    <body name="Parking_Interior_body_23" pos="0 0 -7">
+      <geom mesh="Parking_Interior_23" material="Parking_Interior_tex_mat" class="visual_1" />
+      <geom name="Parking_Interior_23" mesh="Parking_Interior_23" class="collision_1" />
+    </body>
+    <body name="Parking_Interior_body_24" pos="0 0 -7">
+      <geom mesh="Parking_Interior_24" material="Parking_Interior_tex_mat" class="visual_1" />
+      <geom name="Parking_Interior_24" mesh="Parking_Interior_24" class="collision_1" />
+    </body>
+    <body name="Parking_Interior_body_25" pos="0 0 -7">
+      <geom mesh="Parking_Interior_25" material="Parking_Interior_tex_mat" class="visual_1" />
+      <geom name="Parking_Interior_25" mesh="Parking_Interior_25" class="collision_1" />
+    </body>
+    <body name="Parking_Interior_body_26" pos="0 0 -7">
+      <geom mesh="Parking_Interior_26" material="Parking_Interior_tex_mat" class="visual_1" />
+      <geom name="Parking_Interior_26" mesh="Parking_Interior_26" class="collision_1" />
+    </body>
+    <body name="Parking_Interior_body_27" pos="0 0 -7">
+      <geom mesh="Parking_Interior_27" material="Parking_Interior_tex_mat" class="visual_1" />
+      <geom name="Parking_Interior_27" mesh="Parking_Interior_27" class="collision_1" />
+    </body>
+    <body name="Parking_Interior_body_28" pos="0 0 -7">
+      <geom mesh="Parking_Interior_28" material="Parking_Interior_tex_mat" class="visual_1" />
+      <geom name="Parking_Interior_28" mesh="Parking_Interior_28" class="collision_1" />
+    </body>
+    <body name="Parking_Interior_body_29" pos="0 0 -7">
+      <geom mesh="Parking_Interior_29" material="Parking_Interior_tex_mat" class="visual_1" />
+      <geom name="Parking_Interior_29" mesh="Parking_Interior_29" class="collision_1" />
+    </body>
+    <body name="Parking_Interior_body_30" pos="0 0 -7">
+      <geom mesh="Parking_Interior_30" material="Parking_Interior_tex_mat" class="visual_1" />
+      <geom name="Parking_Interior_30" mesh="Parking_Interior_30" class="collision_1" />
+    </body>
+    <body name="Parking_Interior_body_31" pos="0 0 -7">
+      <geom mesh="Parking_Interior_31" material="Parking_Interior_tex_mat" class="visual_1" />
+      <geom name="Parking_Interior_31" mesh="Parking_Interior_31" class="collision_1" />
+    </body>
+    <body name="Parking_Interior_body_32" pos="0 0 -7">
+      <geom mesh="Parking_Interior_32" material="Parking_Interior_tex_mat" class="visual_1" />
+      <geom name="Parking_Interior_32" mesh="Parking_Interior_32" class="collision_1" />
+    </body>
+    <body name="Parking_Interior_body_33" pos="0 0 -7">
+      <geom mesh="Parking_Interior_33" material="Parking_Interior_tex_mat" class="visual_1" />
+      <geom name="Parking_Interior_33" mesh="Parking_Interior_33" class="collision_1" />
+    </body>
+    <body name="Parking_Interior_body_34" pos="0 0 -7">
+      <geom mesh="Parking_Interior_34" material="Parking_Interior_tex_mat" class="visual_1" />
+      <geom name="Parking_Interior_34" mesh="Parking_Interior_34" class="collision_1" />
+    </body>
+    <body name="Parking_Interior_body_35" pos="0 0 -7">
+      <geom mesh="Parking_Interior_35" material="Parking_Interior_tex_mat" class="visual_1" />
+      <geom name="Parking_Interior_35" mesh="Parking_Interior_35" class="collision_1" />
+    </body>
+    <body name="Parking_Interior_body_36" pos="0 0 -7">
+      <geom mesh="Parking_Interior_36" material="Parking_Interior_tex_mat" class="visual_1" />
+      <geom name="Parking_Interior_36" mesh="Parking_Interior_36" class="collision_1" />
+    </body>
+    <body name="Parking_Interior_body_37" pos="0 0 -7">
+      <geom mesh="Parking_Interior_37" material="Parking_Interior_tex_mat" class="visual_1" />
+      <geom name="Parking_Interior_37" mesh="Parking_Interior_37" class="collision_1" />
+    </body>
+    <body name="Parking_Interior_body_38" pos="0 0 -7">
+      <geom mesh="Parking_Interior_38" material="Parking_Interior_tex_mat" class="visual_1" />
+      <geom name="Parking_Interior_38" mesh="Parking_Interior_38" class="collision_1" />
+    </body>
+    <body name="Parking_Interior_body_39" pos="0 0 -7">
+      <geom mesh="Parking_Interior_39" material="Parking_Interior_tex_mat" class="visual_1" />
+      <geom name="Parking_Interior_39" mesh="Parking_Interior_39" class="collision_1" />
+    </body>
+    <body name="Parking_Interior_body_40" pos="0 0 -7">
+      <geom mesh="Parking_Interior_40" material="Parking_Interior_tex_mat" class="visual_1" />
+      <geom name="Parking_Interior_40" mesh="Parking_Interior_40" class="collision_1" />
+    </body>
+    <body name="Parking_Interior_body_41" pos="0 0 -7">
+      <geom mesh="Parking_Interior_41" material="Parking_Interior_tex_mat" class="visual_1" />
+      <geom name="Parking_Interior_41" mesh="Parking_Interior_41" class="collision_1" />
+    </body>
+    <body name="Parking_Interior_body_42" pos="0 0 -7">
+      <geom mesh="Parking_Interior_42" material="Parking_Interior_tex_mat" class="visual_1" />
+      <geom name="Parking_Interior_42" mesh="Parking_Interior_42" class="collision_1" />
+    </body>
+    <body name="Parking_Interior_body_43" pos="0 0 -7">
+      <geom mesh="Parking_Interior_43" material="Parking_Interior_tex_mat" class="visual_1" />
+      <geom name="Parking_Interior_43" mesh="Parking_Interior_43" class="collision_1" />
+    </body>
+    <body name="Parking_Interior_body_44" pos="0 0 -7">
+      <geom mesh="Parking_Interior_44" material="Parking_Interior_tex_mat" class="visual_1" />
+      <geom name="Parking_Interior_44" mesh="Parking_Interior_44" class="collision_1" />
+    </body>
+    <body name="Parking_Interior_body_45" pos="0 0 -7">
+      <geom mesh="Parking_Interior_45" material="Parking_Interior_tex_mat" class="visual_1" />
+      <geom name="Parking_Interior_45" mesh="Parking_Interior_45" class="collision_1" />
+    </body>
+    <body name="Parking_Interior_body_46" pos="0 0 -7">
+      <geom mesh="Parking_Interior_46" material="Parking_Interior_tex_mat" class="visual_1" />
+      <geom name="Parking_Interior_46" mesh="Parking_Interior_46" class="collision_1" />
+    </body>
+    <body name="Parking_Interior_body_47" pos="0 0 -7">
+      <geom mesh="Parking_Interior_47" material="Parking_Interior_tex_mat" class="visual_1" />
+      <geom name="Parking_Interior_47" mesh="Parking_Interior_47" class="collision_1" />
+    </body>
+    <body name="Parking_Interior_body_48" pos="0 0 -7">
+      <geom mesh="Parking_Interior_48" material="Parking_Interior_tex_mat" class="visual_1" />
+      <geom name="Parking_Interior_48" mesh="Parking_Interior_48" class="collision_1" />
+    </body>
+    <body name="Parking_Interior_body_49" pos="0 0 -7">
+      <geom mesh="Parking_Interior_49" material="Parking_Interior_tex_mat" class="visual_1" />
+      <geom name="Parking_Interior_49" mesh="Parking_Interior_49" class="collision_1" />
+    </body>
+    <body name="Parking_Interior_body_50" pos="0 0 -7">
+      <geom mesh="Parking_Interior_50" material="Parking_Interior_tex_mat" class="visual_1" />
+      <geom name="Parking_Interior_50" mesh="Parking_Interior_50" class="collision_1" />
+    </body>
+    <body name="Parking_Interior_body_51" pos="0 0 -7">
+      <geom mesh="Parking_Interior_51" material="Parking_Interior_tex_mat" class="visual_1" />
+      <geom name="Parking_Interior_51" mesh="Parking_Interior_51" class="collision_1" />
+    </body>
+    <body name="Parking_Interior_body_52" pos="0 0 -7">
+      <geom mesh="Parking_Interior_52" material="Parking_Interior_tex_mat" class="visual_1" />
+      <geom name="Parking_Interior_52" mesh="Parking_Interior_52" class="collision_1" />
+    </body>
+    <body name="Parking_Interior_body_53" pos="0 0 -7">
+      <geom mesh="Parking_Interior_53" material="Parking_Interior_tex_mat" class="visual_1" />
+      <geom name="Parking_Interior_53" mesh="Parking_Interior_53" class="collision_1" />
+    </body>
+    <body name="Parking_Interior_body_54" pos="0 0 -7">
+      <geom mesh="Parking_Interior_54" material="Parking_Interior_tex_mat" class="visual_1" />
+      <geom name="Parking_Interior_54" mesh="Parking_Interior_54" class="collision_1" />
+    </body>
+    <body name="Parking_Interior_body_55" pos="0 0 -7">
+      <geom mesh="Parking_Interior_55" material="Parking_Interior_tex_mat" class="visual_1" />
+      <geom name="Parking_Interior_55" mesh="Parking_Interior_55" class="collision_1" />
+    </body>
+    <body name="Parking_Interior_body_56" pos="0 0 -7">
+      <geom mesh="Parking_Interior_56" material="Parking_Interior_tex_mat" class="visual_1" />
+      <geom name="Parking_Interior_56" mesh="Parking_Interior_56" class="collision_1" />
+    </body>
+    <body name="Parking_Interior_body_57" pos="0 0 -7">
+      <geom mesh="Parking_Interior_57" material="Parking_Interior_tex_mat" class="visual_1" />
+      <geom name="Parking_Interior_57" mesh="Parking_Interior_57" class="collision_1" />
+    </body>
+    <body name="Parking_Interior_body_58" pos="0 0 -7">
+      <geom mesh="Parking_Interior_58" material="Parking_Interior_tex_mat" class="visual_1" />
+      <geom name="Parking_Interior_58" mesh="Parking_Interior_58" class="collision_1" />
+    </body>
+    <body name="Parking_Interior_body_59" pos="0 0 -7">
+      <geom mesh="Parking_Interior_59" material="Parking_Interior_tex_mat" class="visual_1" />
+      <geom name="Parking_Interior_59" mesh="Parking_Interior_59" class="collision_1" />
+    </body>
+    <body name="Parking_Interior_body_60" pos="0 0 -7">
+      <geom mesh="Parking_Interior_60" material="Parking_Interior_tex_mat" class="visual_1" />
+      <geom name="Parking_Interior_60" mesh="Parking_Interior_60" class="collision_1" />
+    </body>
+    <body name="Parking_Interior_body_61" pos="0 0 -7">
+      <geom mesh="Parking_Interior_61" material="Parking_Interior_tex_mat" class="visual_1" />
+      <geom name="Parking_Interior_61" mesh="Parking_Interior_61" class="collision_1" />
+    </body>
+    <body name="Parking_Interior_body_62" pos="0 0 -7">
+      <geom mesh="Parking_Interior_62" material="Parking_Interior_tex_mat" class="visual_1" />
+      <geom name="Parking_Interior_62" mesh="Parking_Interior_62" class="collision_1" />
+    </body>
+    <body name="Parking_Interior_body_63" pos="0 0 -7">
+      <geom mesh="Parking_Interior_63" material="Parking_Interior_tex_mat" class="visual_1" />
+      <geom name="Parking_Interior_63" mesh="Parking_Interior_63" class="collision_1" />
+    </body>
+    <body name="Parking_Interior_body_64" pos="0 0 -7">
+      <geom mesh="Parking_Interior_64" material="Parking_Interior_tex_mat" class="visual_1" />
+      <geom name="Parking_Interior_64" mesh="Parking_Interior_64" class="collision_1" />
+    </body>
+    <body name="Parking_Interior_body_65" pos="0 0 -7">
+      <geom mesh="Parking_Interior_65" material="Parking_Interior_tex_mat" class="visual_1" />
+      <geom name="Parking_Interior_65" mesh="Parking_Interior_65" class="collision_1" />
+    </body>
+    <body name="Parking_Interior_body_66" pos="0 0 -7">
+      <geom mesh="Parking_Interior_66" material="Parking_Interior_tex_mat" class="visual_1" />
+      <geom name="Parking_Interior_66" mesh="Parking_Interior_66" class="collision_1" />
+    </body>
+    <body name="Stone_Bricks_body_1" pos="0 0 -7">
+      <geom mesh="Stone_Bricks_1" material="Stone_Bricks_tex_mat" class="visual_1" />
+      <geom name="Stone_Bricks_1" mesh="Stone_Bricks_1" class="collision_1" />
+    </body>
+    <body name="Stone_Bricks_body_2" pos="0 0 -7">
+      <geom mesh="Stone_Bricks_2" material="Stone_Bricks_tex_mat" class="visual_1" />
+      <geom name="Stone_Bricks_2" mesh="Stone_Bricks_2" class="collision_1" />
+    </body>
+    <body name="Stone_Bricks_body_3" pos="0 0 -7">
+      <geom mesh="Stone_Bricks_3" material="Stone_Bricks_tex_mat" class="visual_1" />
+      <geom name="Stone_Bricks_3" mesh="Stone_Bricks_3" class="collision_1" />
+    </body>
+    <body name="Stone_Bricks_body_4" pos="0 0 -7">
+      <geom mesh="Stone_Bricks_4" material="Stone_Bricks_tex_mat" class="visual_1" />
+      <geom name="Stone_Bricks_4" mesh="Stone_Bricks_4" class="collision_1" />
+    </body>
+    <body name="Stone_Bricks_body_5_1" pos="0 0 -7">
+      <geom mesh="Stone_Bricks_5_1" material="Stone_Bricks_tex_mat" class="visual_1" />
+      <geom name="Stone_Bricks_5_1" mesh="Stone_Bricks_5_1" class="collision_1" />
+    </body>
+    <body name="Stone_Bricks_body_5_2" pos="0 0 -7">
+      <geom mesh="Stone_Bricks_5_2" material="Stone_Bricks_tex_mat" class="visual_1" />
+      <geom name="Stone_Bricks_5_2" mesh="Stone_Bricks_5_2" class="collision_1" />
+    </body>
+    <body name="Stone_Bricks_body_6_1" pos="0 0 -7">
+      <geom mesh="Stone_Bricks_6_1" material="Stone_Bricks_tex_mat" class="visual_1" />
+      <geom name="Stone_Bricks_6_1" mesh="Stone_Bricks_6_1" class="collision_1" />
+    </body>
+    <body name="Stone_Bricks_body_6_2" pos="0 0 -7">
+      <geom mesh="Stone_Bricks_6_2" material="Stone_Bricks_tex_mat" class="visual_1" />
+      <geom name="Stone_Bricks_6_2" mesh="Stone_Bricks_6_2" class="collision_1" />
+    </body>
+    <body name="Stone_Bricks_body_6_3" pos="0 0 -7">
+      <geom mesh="Stone_Bricks_6_3" material="Stone_Bricks_tex_mat" class="visual_1" />
+      <geom name="Stone_Bricks_6_3" mesh="Stone_Bricks_6_3" class="collision_1" />
+    </body>
+    <body name="Stone_Bricks_body_6_4" pos="0 0 -7">
+      <geom mesh="Stone_Bricks_6_4" material="Stone_Bricks_tex_mat" class="visual_1" />
+      <geom name="Stone_Bricks_6_4" mesh="Stone_Bricks_6_4" class="collision_1" />
+    </body>
+    <body name="Stone_Bricks_body_6_5" pos="0 0 -7">
+      <geom mesh="Stone_Bricks_6_5" material="Stone_Bricks_tex_mat" class="visual_1" />
+      <geom name="Stone_Bricks_6_5" mesh="Stone_Bricks_6_5" class="collision_1" />
+    </body>
+    <body name="Stone_Bricks_body_6_6" pos="0 0 -7">
+      <geom mesh="Stone_Bricks_6_6" material="Stone_Bricks_tex_mat" class="visual_1" />
+      <geom name="Stone_Bricks_6_6" mesh="Stone_Bricks_6_6" class="collision_1" />
+    </body>
+
+    <body name="Stone_Bricks_body_7" pos="0 0 -7">
+      <geom mesh="Stone_Bricks_7" material="Stone_Bricks_tex_mat" class="visual_1" />
+      <geom name="Stone_Bricks_7" mesh="Stone_Bricks_7" class="collision_1" />
+    </body>
+    <body name="Stone_Bricks_body_8" pos="0 0 -7">
+      <geom mesh="Stone_Bricks_8" material="Stone_Bricks_tex_mat" class="visual_1" />
+      <geom name="Stone_Bricks_8" mesh="Stone_Bricks_8" class="collision_1" />
+    </body>
+    <body name="Stone_Bricks_body_9" pos="0 0 -7">
+      <geom mesh="Stone_Bricks_9" material="Stone_Bricks_tex_mat" class="visual_1" />
+      <geom name="Stone_Bricks_9" mesh="Stone_Bricks_9" class="collision_1" />
+    </body>
+  </worldbody>
+</mujoco>
